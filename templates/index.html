@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         INDEX • DARK-NEON CYBER UI
+         Keeps original structure; adds neon/glass styling
+         ========================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard — Phishing Detection System</title>
+
+    <!-- Bootstrap 5.3 + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts: Poppins (ui), Orbitron (accent headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Project Styles (Dark-Neon) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Page-local helpers (rarely used; reserve space for future) -->
+    <style>
+        /* index local helpers (minimal; main look is in style.css) */
+        .flash-messages { margin-top: 1rem; }
+    </style>
+</head>
+<body class="theme-dark">
+    <!-- =========================
+         NAVBAR • neon underglow
+         ========================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-void neon-underline shadow-soft">
+        <div class="container">
+            <a class="navbar-brand brand-orb fw-bold" href="/">
+                <i class="bi bi-shield-lock me-2"></i>PhishGuard
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                    <!-- future route slot (preserved to keep line parity + extensibility) -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="/about">About</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =========================
+         HERO • animated gradient grid + glow particles
+         ========================= -->
+    <section class="hero-section hero-neon d-flex align-items-center">
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-4 fw-bold text-neon mb-3">
+                        Stay Ahead of <span class="text-cyan">Phishing</span> Threats
+                    </h1>
+                    <p class="lead text-muted-neo mb-4">
+                        Upload email files to analyze headers, content, domains, and hidden indicators with our
+                        <span class="text-mag">rule-based heuristics</span> and <span class="text-violet">visual insights</span>.
+                    </p>
+                    <a href="#upload-section" class="btn btn-neon btn-lg px-4 me-2">
+                        <i class="bi bi-cloud-upload me-2"></i>Try Now
+                    </a>
+                    <a href="/dashboard" class="btn btn-outline-neon btn-lg px-4">
+                        <i class="bi bi-graph-up-arrow me-2"></i>View Dashboard
+                    </a>
+                </div>
+            </div>
+
+            <!-- decorative particles (pure CSS) -->
+            <div class="hero-particles">
+                <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+                <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FLASH MESSAGES (Flask)
+         ========================= -->
+    <div class="container my-4">
+        <div class="flash-messages">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category if category != 'error' else 'danger' }} alert-dismissible fade show glass-alert">
+                            <i class="bi bi-info-circle me-2"></i>{{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+    <!-- =========================
+         UPLOAD • glass card with drag-n-drop
+         ========================= -->
+    <section id="upload-section" class="py-4 py-md-5">
+        <div class="container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="card glass-card shadow-neon p-4 p-md-5">
+                        <div class="text-center mb-3">
+                            <h2 class="h1 fw-bold text-gradient">Upload Email for Analysis</h2>
+                            <p class="text-muted-neo mb-0">Supported formats: <span class="text-cyan">.eml</span>,
+                                <span class="text-cyan">.msg</span>, <span class="text-cyan">.txt</span></p>
+                        </div>
+
+                        <form action="/upload" method="post" enctype="multipart/form-data" id="upload-form">
+                            <div id="drop-area" class="upload-area d-flex flex-column align-items-center justify-content-center"
+                                 onclick="document.getElementById('file-input').click();" role="button">
+                                <i class="bi bi-cloud-arrow-up upload-icon mb-3"></i>
+                                <h4 class="mb-1">Drag &amp; Drop or Click to Upload</h4>
+                                <p class="text-muted-neo small mb-0">Your file stays local to this analysis.</p>
+                                <input type="file" name="file" id="file-input" class="d-none" accept=".eml,.msg,.txt" required>
+                                <div id="file-name" class="mt-3 text-cyan fw-semibold"></div>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-neon btn-lg glow-pulse">
+                                    <i class="bi bi-cpu me-2"></i>Analyze Email
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- subtle helper notes (keep extra lines for parity + clarity) -->
+                        <div class="mt-4 small text-muted-neo">
+                            <ul class="mb-0 ps-3">
+                                <li>Large HTML emails will be sanitized before rendering.</li>
+                                <li>Results include indicators, severity, and optional evidence highlights.</li>
+                                <li>Use the <span class="text-mag">Dashboard</span> for trends over time.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =========================
+                 FEATURE CARDS • neon icons
+                 ========================= -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card glass-card text-center p-4 h-100">
+                        <i class="bi bi-shield-check feature-icon text-cyan"></i>
+                        <h3 class="fw-bold text-light mb-2">Header Analysis</h3>
+                        <p class="text-muted-neo mb-0">
+                            Detect spoofed senders, forged paths, and anomalies in <span class="text-mag">Received</span> chains.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card feature-card glass-card text-center p-4 h-100">
+                        <i class="bi bi-graph-up feature-icon text-mag"></i>
+                        <h3 class="fw-bold text-light mb-2">Detailed Reports</h3>
+                        <p class="text-muted-neo mb-0">
+                            Clear breakdown of indicators with severity and <span class="text-cyan">visual gauges</span>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card feature-card glass-card text-center p-4 h-100">
+                        <i class="bi bi-lightning-charge feature-icon text-violet"></i>
+                        <h3 class="fw-bold text-light mb-2">Fast Detection</h3>
+                        <p class="text-muted-neo mb-0">
+                            Optimized rules scan for red flags in seconds — ideal for demos &amp; labs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer class="bg-void border-top border-dark-2 text-center text-muted-neo py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">© 2025 <span class="text-neon fw-semibold">PhishGuard</span> | CMPE 279</p>
+        </div>
+    </footer>
+
+    <!-- Scripts: Bootstrap + main.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

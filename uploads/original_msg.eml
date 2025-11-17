@@ -1,0 +1,139 @@
+Delivered-To: krutibenhareshbhai.bathani@sjsu.edu
+Received: by 2002:a05:6a10:6c7:b0:678:b2a8:8b7a with SMTP id c7csp1475991pxv;
+        Mon, 17 Nov 2025 11:05:06 -0800 (PST)
+X-Received: by 2002:a05:6512:b20:b0:594:2646:2350 with SMTP id 2adb3069b0e04-595841a67aamr3962964e87.21.1763406305993;
+        Mon, 17 Nov 2025 11:05:05 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763406305; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Uk8qezo29AEha/r15iLZSlRIGWu+8sG6FTYt2G85ug93g1ppXLsdeJ8uAbYgbxt0kh
+         V5HRWK4nYuZ4Q4rp4czEac4mYfpQX26eW2ykJGiRAagyo5RGXsbc0Xg9YLMqfoF4RwNX
+         CWOyTEuVWqIbbb5+5jCEK/BnpMekzElWiCiN/ViWLRVvNX5asa4td8SnZ/i3+/s7+S08
+         h70XiVDY2rjQ0JsbtA56CsY1+4hksxWS3JN3WdSyFLDT3nSfyn1KV6XZBTBBNMw5Li+s
+         a0VA5T0sIfliaAImCdjcmXWDeyodQvkRcbnkjcrKlBhdHRaq6JXLhgO6WsNY9jsYlVEE
+         m7eA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=XvWsiMGJgK5Itc2Y4iF7SZ8MwJkRFzcEUCWJV/d3HJk=;
+        fh=OrlYcJ8q9j3uhfqNWGnw/XJ6vL94Bnsvj3vwRa/UWlc=;
+        b=Fa/+mYpRUvabjUNqiHd1Zd9PHDn2ej9/+PcXXZA+n74NLdUy0gOqCfeveuixle6JJI
+         g3Mur7dFePp8WGMnlYAvNQJzy47UT5ff/mJA9EN10gAcgiiGaBsaHqy8IWLpTujmifaA
+         1B7HU6HPVFSWPbuHj2rbe6tuzeQSPb4a+rU5bC2xWrtMBDIiDaRRQ4YTcnpVig/pWllM
+         De4f2G22cBOPgTYcR8EOJPULu2cnNZz/X2NUfZumGeVd3+hSuaqd/GAHfaxQjtA0JGqH
+         09NQJBM0mGSHljM+2eRAkNGBqqoD6GZdU1B3agRc4sUTLYLVzS+zrEKfKkJ/4gFmOo4U
+         xxrQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sjsu.edu header.s=google header.b=npBcLoYp;
+       spf=pass (google.com: domain of mahima.agumbesuresh@sjsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=mahima.agumbesuresh@sjsu.edu;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sjsu.edu;
+       dara=neutral header.i=@sjsu.edu
+Return-Path: <mahima.agumbesuresh@sjsu.edu>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 2adb3069b0e04-595803f88cfsor1641771e87.10.2025.11.17.11.05.05
+        for <krutibenhareshbhai.bathani@sjsu.edu>
+        (Google Transport Security);
+        Mon, 17 Nov 2025 11:05:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of mahima.agumbesuresh@sjsu.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sjsu.edu header.s=google header.b=npBcLoYp;
+       spf=pass (google.com: domain of mahima.agumbesuresh@sjsu.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=mahima.agumbesuresh@sjsu.edu;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=sjsu.edu;
+       dara=neutral header.i=@sjsu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=sjsu.edu; s=google; t=1763406305; x=1764011105; darn=sjsu.edu;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=XvWsiMGJgK5Itc2Y4iF7SZ8MwJkRFzcEUCWJV/d3HJk=;
+        b=npBcLoYp969IhKULnMuDMIzuk4Q0/bXDngdProfYO2Uu7ZqLETJACTq8twlIjm3a6X
+         c1x/M89EbPT1OTlp2VuiZAMqtkZROsUrX6ok8q9AUepI8yKcqkip2jtX8r4liyYKI3E7
+         B+3e6Xma5QoMkkZU26vx1P2S8x1Kqk+vfjj8Q=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763406305; x=1764011105;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=XvWsiMGJgK5Itc2Y4iF7SZ8MwJkRFzcEUCWJV/d3HJk=;
+        b=Wpt9Dti06L8Dk8bCXntNug6LhbuMjIHxDF9qlSdDhHSagnt0UtkuM3HSQ/LbLjA3dv
+         sjA2kjCLnbmxUr1v+6Nz2mr/dZAlOilceEIDejDpkAXaKhJmG0sRuvIDlgVleB+zbfP+
+         7zPCclF7aFT4F7fab+436eKmvRoPqtIW1PtcNntvMzX4+e60KBUuyX1rY6SfDhDQLFXd
+         h6OtaQzxLebPBTO8RoNd/s31bCrLLvtbho1FNx+yjvzUTxlrevbd241oeksBmo2UCAAn
+         CEQ52MuEYe9vnK6LyCFLJOS/R3JLpKK0Jk/8CmOvbMG3meTCWf3nFeYqcTQki/hMI52/
+         Njcw==
+X-Gm-Message-State: AOJu0YySPltu5B0jiNLZz9EQBw9oC0teIaVJ+9BKDoaaeMThVn3qfSQS
+	1t8VEz2eYmpXdezcEEgUrf0xpbqi+K5VEqsGR6XN5BnBZ/OWGmy4FxkgZmVs9XQpnoKh7PvH9/9
+	y6Nz8g9Pb67PMO/LyKD59l1ogeACblbgJFkipLZsVgoL364PLMooniPY=
+X-Gm-Gg: ASbGncu7OnAw2eayvO0BsFjI7m2pt2QYh7uA2GxNmbYB9kWPOzQ91WskaUavtQ7upax
+	apUFtLHe8mVcpj4COOGgWQgzGOgpBmckHYMjbHvvbftCn1m1zTJ3rrIvuMG8/nubVJGrGPck1cd
+	Z9gCyfjQNORxVJMogCKQNzNZFtLi/AosfpINAzTwWVD9JNyD/lrBZ0PP3f0o+qLmfYFiSKqnaMS
+	arugRILI3KM3H8z9JuOHS2ORp6P5FRAxXLUFioKZDFhK/NuzG71+fFsgTXolVu31mkCZwz3vpPi
+	mJ2bEENd6OCw/44=
+X-Google-Smtp-Source: AGHT+IFXaDRCXz+lfyzpXGJnMwUydv2sn3aBgniXKMAMu70Cj9XSzYeITjzz+t8mpfzKHfy3yUUHexm1FJgg45Eofe4=
+X-Received: by 2002:a05:6512:b20:b0:595:7f1c:29bb with SMTP id
+ 2adb3069b0e04-595841a65fbmr4409108e87.22.1763406305261; Mon, 17 Nov 2025
+ 11:05:05 -0800 (PST)
+MIME-Version: 1.0
+References: <CAKoJRkJPDTR2UBCZOnvrfXF5V7pXC_ycWPKCdc9EiCJXtLNf7Q@mail.gmail.com>
+In-Reply-To: <CAKoJRkJPDTR2UBCZOnvrfXF5V7pXC_ycWPKCdc9EiCJXtLNf7Q@mail.gmail.com>
+From: Mahima Agumbe Suresh <mahima.agumbesuresh@sjsu.edu>
+Date: Mon, 17 Nov 2025 11:04:53 -0800
+X-Gm-Features: AWmQ_blV81vEL5pUyJEwst82YDMOzm4EjCfYJhVnf7y3vj3FdGuo7Ayk9tVEbYQ
+Message-ID: <CAE3qg3JULwcgWSTu9RLoumBWmncDTTS=hSrAx3=SO1Zd0jP=bw@mail.gmail.com>
+Subject: Re:
+To: Alan Xie <alan.xie@sjsu.edu>
+Cc: Kruti Bathani <krutibenhareshbhai.bathani@sjsu.edu>
+Content-Type: multipart/alternative; boundary="0000000000006b8b3a0643cf0680"
+
+--0000000000006b8b3a0643cf0680
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Alan,
+
+I'm copying your TA here. She should be able to help.
+
+Regards,
+Mahima
+
+
+On Sun, Nov 16, 2025 at 3:29=E2=80=AFPM Alan Xie <alan.xie@sjsu.edu> wrote:
+
+> Hi Professor,
+>
+> Im currently looking at the graded labs and I noticed for lab 2 3 4, I
+> only got 1/4. I believe I resubmitted the ones that were wrong. Can you
+> check on this for me?
+>
+> Warm regards,
+>
+> Alan Xie
+>
+
+--0000000000006b8b3a0643cf0680
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div>Hi Alan,</div><div><br></div><div>I&=
+#39;m copying your TA here. She should be able to help.</div><div><br></div=
+><div><div dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr">Regards,<=
+div>Mahima</div></div></div></div><br><input name=3D"virtru-metadata" type=
+=3D"hidden" value=3D"{&quot;email-policy&quot;:{&quot;state&quot;:&quot;clo=
+sed&quot;,&quot;expirationUnit&quot;:&quot;days&quot;,&quot;disableCopyPast=
+e&quot;:false,&quot;disablePrint&quot;:false,&quot;disableForwarding&quot;:=
+false,&quot;enableNoauth&quot;:false,&quot;persistentProtection&quot;:false=
+,&quot;expandedWatermarking&quot;:false,&quot;expires&quot;:false,&quot;isM=
+anaged&quot;:false,&quot;sms&quot;:false},&quot;attachments&quot;:{},&quot;=
+compose-id&quot;:&quot;2&quot;,&quot;compose-window&quot;:{&quot;secure&quo=
+t;:false}}"></div><br><div class=3D"gmail_quote gmail_quote_container" styl=
+e=3D""><div dir=3D"ltr" class=3D"gmail_attr">On Sun, Nov 16, 2025 at 3:29=
+=E2=80=AFPM Alan Xie &lt;<a href=3D"mailto:alan.xie@sjsu.edu">alan.xie@sjsu=
+.edu</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"mar=
+gin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1=
+ex"><div dir=3D"ltr">Hi Professor,<div><br></div><div>Im currently=C2=A0loo=
+king at the graded labs and I noticed for lab 2 3 4, I only got 1/4. I beli=
+eve I resubmitted=C2=A0the ones that were wrong. Can you check on this for =
+me?</div><div><br></div><div>Warm regards,</div><div><br></div><div>Alan Xi=
+e</div></div>
+</blockquote></div></div>
+
+--0000000000006b8b3a0643cf0680--

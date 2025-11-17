@@ -1,0 +1,773 @@
+Delivered-To: bathanikruti0910@gmail.com
+Received: by 2002:a05:6a20:ed03:20b0:35d:5500:c0f3 with SMTP id o3-n2csp509689pzy;
+        Sat, 15 Nov 2025 11:23:32 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEXkL1iNEGXjifrvDnPfKlgUConFRmafJ1WpramY+E/w5DIHyY5IpSpBbimJfaI0t3hLS/V
+X-Received: by 2002:a05:622a:20d:b0:4ed:b1fe:f885 with SMTP id d75a77b69052e-4edf2054e17mr113877781cf.19.1763234612276;
+        Sat, 15 Nov 2025 11:23:32 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763234612; cv=none;
+        d=google.com; s=arc-20240605;
+        b=f8nV5tSPh/83FZ9YaNY3Oi7gLHCoZ5IMJTIhCLUFaWrsW2pRyPN6bWh8R+TzGA3Div
+         D8OzYP/1n/jjZYrn8J5xqrClfSc2yln3pNHa7/IMiex35bYrWdOCIUJIe8t+WD9YSWd8
+         u5nSkctaTgv62DqJIniUj2lJ3xylTHzdzlXRkSiupKBPwhRnhTfBaRhiWzEj4aOVOaFO
+         iynrYwXj3yzAdHk99A5kZQT8fGMrf525i70i2VdSwgc9lKejdTtyE5Pd/3olytqHpBKT
+         SJCQGo0R97M62relDV8Pe6m7jWGHtalMHQXGm2IBwlk6ixA0dX46Yim0GQsNEgDlYI8U
+         CKEw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:list-unsubscribe:list-unsubscribe-post:mime-version
+         :subject:message-id:to:from:date:cfbl-address:dkim-signature
+         :dkim-signature;
+        bh=7v6JnYyPlZ5/zl3zTn0/pBJOCCAMfRLBrivMlDG4fzY=;
+        fh=iqyjEYguCv0rhQm+hGndJ7fRoAaChba7XGwiBAvaO9E=;
+        b=b9svXJFucEHYBn/0HNUctxwL+11LEVCMspfCHQhnLSLEZuckmPcgFbZIDQ4N7QlIE9
+         h9TGtS2oRIzMeDjCgyuMX43YFmPNDRa7M454h+9Ro6LeWfho7BtNsVLuU0KdUJ/R1MFM
+         grYsel9a/2nOqr66RIg7feUQJIdDdbe9+0OSSr2dbIEbeHh65l/byHnPx5OOYezlM7lL
+         HeCUS6TP8uVtijRdsfrR6Avnhn5+somkr6D0yq+LbtLPPw8OXG2i2sRaR6HfM3iMbQS3
+         nwm1rBW91DzkevOUY0v/1A0w/176dEflqc8qqHq/fORTGoqqMz4UabmTOQN2zHx4VHb0
+         4/pA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nogigiddy.com header.s=acdkim1 header.b=HTvwtS9d;
+       dkim=pass header.i=@acems1.com header.s=acdkim1 header.b=U90fcT3d;
+       spf=pass (google.com: domain of bounce-2555295-4790-4687392-bathanikruti0910=gmail.com@em-2555295.nogigiddy.com designates 192.92.97.134 as permitted sender) smtp.mailfrom="bounce-2555295-4790-4687392-bathanikruti0910=gmail.com@em-2555295.nogigiddy.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nogigiddy.com
+Return-Path: <bounce-2555295-4790-4687392-bathanikruti0910=gmail.com@em-2555295.nogigiddy.com>
+Received: from s3.csa1.acemsd3.com (s3.csa1.acemsd3.com. [192.92.97.134])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ee11bdf94fsi4839451cf.606.2025.11.15.11.23.32
+        for <bathanikruti0910@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 15 Nov 2025 11:23:32 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-2555295-4790-4687392-bathanikruti0910=gmail.com@em-2555295.nogigiddy.com designates 192.92.97.134 as permitted sender) client-ip=192.92.97.134;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nogigiddy.com header.s=acdkim1 header.b=HTvwtS9d;
+       dkim=pass header.i=@acems1.com header.s=acdkim1 header.b=U90fcT3d;
+       spf=pass (google.com: domain of bounce-2555295-4790-4687392-bathanikruti0910=gmail.com@em-2555295.nogigiddy.com designates 192.92.97.134 as permitted sender) smtp.mailfrom="bounce-2555295-4790-4687392-bathanikruti0910=gmail.com@em-2555295.nogigiddy.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=nogigiddy.com
+X-KumoRef: eyJfQF8iOiJcXF8vIiwicmVjaXBpZW50IjoiYmF0aGFuaWtydXRpMDkxMEBnbWFpbC5jb20ifQ==
+DKIM-Signature: v=1; a=rsa-sha256; d=nogigiddy.com; s=acdkim1; c=relaxed/relaxed;
+	bh=7v6JnYyPlZ5/zl3zTn0/pBJOCCAMfRLBrivMlDG4fzY=;
+	h=from:to:subject:date:mime-version:content-type:sender:cc:date:message-id:
+		list-unsubscribe:list-unsubscribe-post; t=1763234201; x=1763320601;
+	b=HTvwtS9dcjYcXIMc7gNbaLR+IQziDA5QFYm2OjY0jU/PKNh0P4+DVLZWg/OcDCwdg49/zZlE1
+	Vm0VMv62OZiif8UL/ywydxIxs2weMrOLzjzyQ9E24mHIl1jaiJlGqZKEamqmRbsSFu51FccrwN5
+	WNoMTrzjpW1cDOsG5neuu8Rvadv30fYreA5qC6VOanbkw/ae6c7D0Pc5oxevgORMBthiBAPP4KO
+	RwuyOjpnind/miHFag9tSNRPIdnhkYeX5wl+Sz4216aWZuodVvn9lwAF04m8doyoSsw0TtDn7sq
+	3jlup+hguEIFLsspZIF0C06xBpv4Fu5DaIxMotTZp/jA==;
+DKIM-Signature: v=1; a=rsa-sha256; d=acems1.com; s=acdkim1; c=relaxed/relaxed;
+	bh=7v6JnYyPlZ5/zl3zTn0/pBJOCCAMfRLBrivMlDG4fzY=;
+	h=from:to:subject:date:mime-version:content-type:sender:cc:date:message-id:
+		list-unsubscribe:list-unsubscribe-post; t=1763234201; x=1763320601;
+	b=U90fcT3da2YqJ56D2pTJ3zqCB0qmCa3G2Y2u1vkb/XcaAMeryoqoUzv/j9euzMUhAJWDWRnzo
+	D5WAZIuJk+88RVCtIRluCmOu539rqXlH2iJUIK4cTrvfu7D0ZrYWbg8eYViVGqnuBRrZxUKHmC3
+	J7qDSxaVcPX5z841PsOP5HO9d+hZvQlM2FJRKYJZavGr1nva3NUCODlshnEl/F3X5Ja17qfElLv
+	yPBzfcaW9P+nSbv66p0Lx3L9G270dneEfhzUcmt5wd426iepFHE7yHNoNZ/iBNhd5gdDDepPjzf
+	O/Qowm5sKxzFuMUvjvY4OvmUUo6TmwFEcHd9JosnCL3g==;
+CFBL-Address: fbl-report@acems1.com; report=arf
+X-Mailer: ActiveCampaign Mailer
+Received: from cell-2-5cf978458-nj9vs (10.65.88.7)
+  by acems1.com (KumoMTA 10.13.181.230) 
+  with ESMTP id 9e1b13bec25711f0862f0edf32a7559f for <bathanikruti0910@gmail.com>;
+  Sat, 15 Nov 2025 19:16:41 +0000
+Date: Sat, 15 Nov 2025 19:16:41 +0000 (GMT)
+From: Skylar Henderson <help@nogigiddy.com>
+To: bathanikruti0910@gmail.com
+Message-ID: <85302980.7325216.1763234201895@cell-2-5cf978458-nj9vs>
+Subject: You're All Set
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7325215_1287201833.1763234201895"
+X-DKIM-Options: s=acdkim1
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Virtual-Mta: s6.acemsrve.com
+X-250ok-CID: 2555295-4790
+List-Unsubscribe: <https://tasteoftheoldcountry.activehosted.com/box.php?nl=84&c=4790&m=16883&s=879bd2e24244a30e80c741a946b4408d&funcml=unsub2&luha=1>,<mailto:unsubscribe-36e286258cc135c7c8e2bfb20dd0aace-4790-879bd2e24244a30e80c741a946b4408d@s6.acemsrve.com>
+Feedback-ID: 2555295:activecampaign
+X-Sending-Engine: Hedwig PCS
+X-Report-Abuse: Please report abuse to abuse@activecampaign.com
+X-mid: YmF0aGFuaWtydXRpMDkxMEBnbWFpbC5jb20gLCBjNDc5MCAsIG0xNjg4MyAsIHMzMzI5MTgw
+
+------=_Part_7325215_1287201833.1763234201895
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+=C2=A0
+
+Hello ,
+
+You're all set now. Please finish the last step of your program search at
+your earliest convenience. It will only take 60 seconds to find a program s=
+o I encourage you to do it now. As mentioned, you may qualify=20
+for $7,395 in grant money. Please confirm your options now:=20
+
+Click Here To See Your Options https://email.nogigiddy.com/c/1fa00adfed1341=
+3d?utm_source=3Dlensa-pp&utm_medium=3Demail-broadcast&utm_campaign=3D&utm_c=
+ontent=3Dzuserid-4687392&utm_sources=3D%7Butm_sources%7D&list=3DLensa Remot=
+e Job Alerts Optin
+
+Let me know if you have any questions.
+
+Skylar
+
+*https://studentaid.gov/understand-aid/types/grants/pell
+
+Advertising Disclosures https://email.nogigiddy.com/c/f4b8e8fc8793c570?
+
+Privacy Policy
+At NoGigiddy, we are dedicated to protecting your privacy and ensuring that=
+ your personal information is handled with care. This Privacy Policy explai=
+ns what information we collect, how we use it, and the measures we take to =
+safeguard your data when you visit our website or use our services.
+
+Your Consent
+By accessing our platform, registering for job alerts, or interacting with =
+our communications, you agree to the terms outlined in this Privacy Policy =
+and in our Terms of Service. Your consent may be provided through form subm=
+issions, account creation, or engagement with our online tools and emails.
+
+Information We Collect
+To provide a smooth and personalized experience, we gather two types of inf=
+ormation:
+
+Personal Information:=E2=80=A8Details you submit directly, such as your nam=
+e, email address, phone number, and job preferences when you sign up or com=
+plete forms.
+
+Technical and Usage Information:=E2=80=A8Automatically collected data inclu=
+ding your IP address, browser type, device identifiers, and interaction act=
+ivity. This information helps improve site performance and user experience.
+
+How We Use Your Information
+We use your information to deliver high-quality services and relevant commu=
+nication, including:
+* Sending remote job alerts based on your preferences
+* Improving the speed, usability, and reliability of our platform
+* Sharing updates, service notices, and opportunities that may interest you
+We do not sell or share your personal information with unrelated third part=
+ies. Marketing messages may be opted out of at any time using the unsubscri=
+be link provided.
+
+Your Rights and Choices
+You may access, update, or request deletion of your personal information at=
+ any time by contacting our support team. You can also manage your email pr=
+eferences through any marketing communication you receive. Certain essentia=
+l account or service-related messages may still be sent when needed.
+
+Data Security and Retention
+We take reasonable security measures to protect your data from unauthorized=
+ access or misuse. Your information is retained only as long as required fo=
+r legal, operational, or security purposes.
+
+Third-Party Tools and Links
+Our platform may include links or integrations from external websites or to=
+ols. These third-party services operate independently, and we encourage you=
+ to review their privacy policies before providing any personal information=
+. NoGigiddy is not responsible for their practices.
+
+Governing Law
+This Privacy Policy is governed by the laws of the State of Georgia, United=
+ States. Any disputes or claims related to this policy will be resolved und=
+er applicable Georgia law.
+
+Policy Updates
+We may update this Privacy Policy from time to time to reflect changes in o=
+ur operations or legal requirements. Updated versions will be posted on thi=
+s page. Continued use of our site after any changes means you accept the re=
+vised terms.
+
+Effective Date: November 15, 2025
+For questions or privacy-related requests, please contact us at support@nog=
+igiddy.com
+_________________
+
+Sent to: bathanikruti0910@gmail.com
+
+Unsubscribe:
+http://tasteoftheoldcountry.activehosted.com/proc.php?c=3D4790&m=3D16883&s=
+=3D879bd2e24244a30e80c741a946b4408d&d=3D3329180&v=3D2&nl=3D84&act=3Dunsub
+
+NoGigiddy, 3100 Interstate North Circle Southeast, Suite 200, Atlanta, GA 3=
+0339, United States
+------=_Part_7325215_1287201833.1763234201895
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta http-equiv=3D"Content-Language" content=3D"en-us">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+<meta name=3D"format-detection" content=3D"date=3Dno">
+<meta name=3D"format-detection" content=3D"address=3Dno">
+<meta name=3D"format-detection" content=3D"email=3Dno">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, minimal-ui, initia=
+l-scale=3D1.0, maximum-scale=3D1.0, user-scalable=3D0;">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<style data-ac-keep=3D"true"> .ExternalClass { width: 100%; background: inh=
+erit; background-color: inherit; } .ExternalClass, .ExternalClass p, .Exter=
+nalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {=
+ line-height: 100%; } .ExternalClass p, .ExternalClass ul, .ExternalClass o=
+l { Margin: 0; } .undoreset div p, .undoreset p { margin-bottom: 20px; } di=
+v[class^=3D"aolmail_divbody"] { overflow: auto; } [owa] #ac-footer { paddin=
+g: 20px 0px !important; background: inherit; background-color: inherit; } a=
+[x-apple-data-detectors] { color: inherit !important; text-decoration: none=
+ !important; font-size: inherit !important; font-family: inherit !important=
+; font-weight: inherit !important; line-height: inherit !important; } @-ms-=
+viewport { width: device-width; } </style>
+<style data-ac-keep=3D"true">
+@media only screen and (max-width: 600px) { /*-----------------------------=
+--------------------------------------------*\ Abandoned Cart widget \*----=
+--------------------------------------------------------------------*/ .td_=
+abandoned-cart img {display: block;padding-right: 0 !important;padding-bott=
+om: 0 !important;width: 100% !important;max-width: 100% !important;height: =
+auto !important;} body { padding: 0!important; font-size:1em!important; } *=
+ { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing:=
+ border-box; } *[class].divbody {-webkit-text-size-adjust:none !important;}=
+ *[class].td_picture img {width:auto !important;} *[class].td_text { line-h=
+eight: 110%; } *[class].td_button { width: auto; } /* Collapse all block el=
+ements */ :not(.body) table { display: block!important; float:none!importan=
+t; border-collapse:collapse !important; width:100% !important; min-width:10=
+0% !important; clear:both!important; } :not(.body) thead, :not(.body) tbody=
+, :not(.body) tr { display:block!important; float:none!important; width:100=
+% !important; } :not(.body) th, :not(.body) td, :not(.body) p { display:blo=
+ck!important; float:none!important; width:100% !important; clear:both!impor=
+tant; } /* Remove browser default styling for elements */ ul, ol { margin-l=
+eft: 20px; margin-bottom: 10px; margin-top: 10px; -webkit-margin-before: 0;=
+ -webkit-margin-after: 0; -webkit-padding-start: 0; } /* Set default height=
+ for spacer once collapse */ *[class].spacer { height: auto!important; } a[=
+href^=3Ddate]{ color:inherit !important; text-decoration:none !important;} =
+a[href^=3Dtelephone]{ color:inherit !important; text-decoration:none !impor=
+tant;} a[href^=3Daddress]{ color:inherit !important; text-decoration:none !=
+important;} a[href^=3Demail]{ color:inherit !important; text-decoration:non=
+e !important;} /* Default table cell height */ td[height=3D"8"]{height:8px!=
+important;font-size:8px!important;line-height:8px!important;}
+td[height=3D"12"]{height:12px!important;font-size:12px!important;line-heigh=
+t:12px!important;} /*------------------------------------------------------=
+-------------------*\ Product Widget \*------------------------------------=
+-------------------------------------*/ .td_product div, .td_product .produ=
+cts-display { float: none !important; display: block !important; width: 100=
+% !important; Margin-bottom: 20px !important; } .td_product img { width: 10=
+0% !important; max-width: 100% !important; } /* Default social icons */ *[c=
+lass].ac-social-icon-16 {width:16px !important; height:16px !important;} *[=
+class].ac-social-icon-24 {width:24px !important; height:24px !important;} *=
+[class].ac-social-icon-28 {width:28px !important; height:28px !important;} =
+*[class].__ac_social_icons { margin-right: 0px !important; } }
+</style>
+<style data-ac-keep=3D"true"> @media only screen and (max-width: 320px) { #=
+layout-row51574 { max-height: 0px!important; font-size: 0px!important; disp=
+lay: none!important; visibility: hidden!important; } div.divbody { padding:=
+ 20px !important; } table, tbody, td, .divbody { display: table !important;=
+ width: 100% !important; max-width: 100% !important; } .td_rss .rss-item im=
+g.iphone_large_image { width: auto !important; } u + .body { display: table=
+ !important; width: 100vw !important; min-width: 100vw !important; } u + .b=
+ody table { display: table !important; width: 100% !important; min-width: 1=
+00% !important; } u + .body td { display: block !important; width: 100% !im=
+portant; min-width: 100% !important; } u + .body img { display: inline-bloc=
+k !important; margin: auto !important; width: auto !important; vertical-ali=
+gn: bottom !important; } u + .body center { display: block !important; marg=
+in: auto !important; width: 100% !important; min-width: 100% !important; te=
+xt-align: center !important; } u + .body table._ac_social_table, u + .body =
+table._ac_social_table td, u + .body table._ac_social_table div, u + .body =
+table._ac_social_table a { display: inline-block !important; margin: auto !=
+important; width: auto !important; min-width: auto !important; text-align: =
+center !important; } u + .body table._ac_social_table img { display: inline=
+-block !important; margin: auto !important; width: 32px !important; min-wid=
+th: 32px !important; max-width: 32px !important; }
+}
+@media only screen and (max-width: 375px) { #layout-row51574 { max-height: =
+0px!important; font-size: 0px!important; display: none!important; visibilit=
+y: hidden!important; } div.divbody { padding: 20px !important; } table, tbo=
+dy, td, .divbody { display: table !important; width: 100% !important; max-w=
+idth: 100% !important; } .td_rss .rss-item img.iphone_large_image { width: =
+auto !important; } u + .body { display: table !important; width: 100vw !imp=
+ortant; min-width: 100vw !important; } u + .body table { display: table !im=
+portant; width: 100% !important; min-width: 100% !important; } u + .body td=
+ { display: block !important; width: 100% !important; min-width: 100% !impo=
+rtant; } u + .body img { display: inline-block !important; margin: auto !im=
+portant; width: auto !important; vertical-align: bottom !important; } u + .=
+body center { display: block !important; margin: auto !important; width: 10=
+0% !important; min-width: 100% !important; text-align: center !important; }=
+ u + .body table._ac_social_table, u + .body table._ac_social_table td, u +=
+ .body table._ac_social_table div, u + .body table._ac_social_table a { dis=
+play: inline-block !important; margin: auto !important; width: auto !import=
+ant; min-width: auto !important; text-align: center !important; } u + .body=
+ table._ac_social_table img { display: inline-block !important; margin: aut=
+o !important; width: 32px !important; min-width: 32px !important; max-width=
+: 32px !important; }
+}
+@media only screen and (max-width: 414px) { #layout-row51574 { max-height: =
+0px!important; font-size: 0px!important; display: none!important; visibilit=
+y: hidden!important; } div.divbody { padding: 20px !important; } table, tbo=
+dy, td, .divbody { display: table !important; width: 100% !important; max-w=
+idth: 100% !important; } .td_rss .rss-item img.iphone_large_image { width: =
+auto !important; } u + .body { display: table !important; width: 100vw !imp=
+ortant; min-width: 100vw !important; } u + .body table { display: table !im=
+portant; width: 100% !important; min-width: 100% !important; } u + .body td=
+ { display: block !important; width: 100% !important; min-width: 100% !impo=
+rtant; } u + .body img { display: inline-block !important; margin: auto !im=
+portant; width: auto !important; vertical-align: bottom !important; } u + .=
+body center { display: block !important; margin: auto !important; width: 10=
+0% !important; min-width: 100% !important; text-align: center !important; }=
+ u + .body table._ac_social_table, u + .body table._ac_social_table td, u +=
+ .body table._ac_social_table div, u + .body table._ac_social_table a { dis=
+play: inline-block !important; margin: auto !important; width: auto !import=
+ant; min-width: auto !important; text-align: center !important; } u + .body=
+ table._ac_social_table img { display: inline-block !important; margin: aut=
+o !important; width: 32px !important; min-width: 32px !important; max-width=
+: 32px !important; }
+}
+@media only screen and (max-width: 667px) { #layout-row51574 { max-height: =
+0px!important; font-size: 0px!important; display: none!important; visibilit=
+y: hidden!important; } div.divbody { padding: 20px !important; } table, tbo=
+dy, td, .divbody { display: table !important; width: 100% !important; max-w=
+idth: 100% !important; } .td_rss .rss-item img.iphone_large_image { width: =
+auto !important; } u + .body { display: table !important; width: 100vw !imp=
+ortant; min-width: 100vw !important; } u + .body table { display: table !im=
+portant; width: 100% !important; min-width: 100% !important; } u + .body td=
+ { display: block !important; width: 100% !important; min-width: 100% !impo=
+rtant; } u + .body img { display: inline-block !important; margin: auto !im=
+portant; width: auto !important; vertical-align: bottom !important; } u + .=
+body center { display: block !important; margin: auto !important; width: 10=
+0% !important; min-width: 100% !important; text-align: center !important; }=
+ u + .body table._ac_social_table, u + .body table._ac_social_table td, u +=
+ .body table._ac_social_table div, u + .body table._ac_social_table a { dis=
+play: inline-block !important; margin: auto !important; width: auto !import=
+ant; min-width: auto !important; text-align: center !important; } u + .body=
+ table._ac_social_table img { display: inline-block !important; margin: aut=
+o !important; width: 32px !important; min-width: 32px !important; max-width=
+: 32px !important; }
+} </style><!--[if !mso]><!-- webfonts --> <!--<![endif]--> <!--[if lt mso 1=
+2]> <![endif]--> <!--[if gte mso 9]>
+<xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:Pixel=
+sPerInch> </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+</head>
+<body id=3D"ac-designer" class=3D"body" style=3D"font-family: Arial; line-h=
+eight: 1.1; margin: 0px; background-color: #FFFFFF; width: 100%; text-align=
+: center;">
+<div class=3D"divbody" style=3D"margin: 0px; outline: none; padding: 0px; c=
+olor: #000000; font-family: arial; line-height: 1.1; width: 100%; backgroun=
+d-color: #FFFFFF; background: #FFFFFF; text-align: center;">
+<table class=3D"template-table" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" align=3D"left" style=3D"-ms-text-size-adjust: auto; -=
+webkit-text-size-adjust: 100%; border-collapse: collapse; font-size: 14px; =
+min-width: auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-c=
+olor: #FFFFFF; background: #FFFFFF;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td align=3D"center" valign=3D"top" width=3D"100%" style=3D"mso-line-height=
+-rule: exactly;">
+<table class=3D"template-table" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"650" bgcolor=3D"#FFFFFF" style=3D"-ms-text-size-adjust: aut=
+o; -webkit-text-size-adjust: 100%; border-collapse: collapse; font-size: 14=
+px; min-width: auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; max-widt=
+h: 650px;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td id=3D"layout_table_af1c24e165d5a907b6c6e218471b1f82e2a7c53f" valign=3D"=
+top" align=3D"center" width=3D"650" style=3D"mso-line-height-rule: exactly;=
+">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"layout lay=
+out-table root-table" width=3D"650" style=3D"-ms-text-size-adjust: auto; -w=
+ebkit-text-size-adjust: 100%; border-collapse: collapse; font-size: 14px; m=
+in-width: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td id=3D"layout-row-margin51574" valign=3D"top" style=3D"mso-line-height-r=
+ule: exactly;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: collapse; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;">
+<tr id=3D"layout-row51574" class=3D"layout layout-row widget _widget_spacer=
+ " style=3D"mso-line-height-rule: exactly;">
+<td id=3D"layout-row-padding51574" valign=3D"top" style=3D"mso-line-height-=
+rule: exactly;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: collapse; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td valign=3D"top" height=3D"30" style=3D"mso-line-height-rule: exactly;">
+<div class=3D"spacer" style=3D"margin: 0; outline: none; padding: 0; height=
+: 30px;">
+<table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: collapse; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td class=3D"spacer-body" valign=3D"top" height=3D"30" width=3D"650" style=
+=3D"mso-line-height-rule: exactly;">&nbsp;</td>
+</tr>
+</table>
+</div></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr style=3D"mso-line-height-rule: exactly;">
+<td id=3D"layout-row-margin51573" valign=3D"top" style=3D"mso-line-height-r=
+ule: exactly; padding: 0 20px 0 20px;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: initial !important; font-size: 14px; min-width: 100%; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt;">
+<tr id=3D"layout-row51573" class=3D"layout layout-row widget _widget_text s=
+tyle51573" style=3D"mso-line-height-rule: exactly; margin: 0; padding: 0;">
+<td id=3D"layout-row-padding51573" valign=3D"top" style=3D"mso-line-height-=
+rule: exactly; padding: 0;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: collapse; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td id=3D"text_div51550" class=3D"td_text td_block" valign=3D"top" align=3D=
+"left" width=3D"610" style=3D"line-height: 115%; mso-line-height-rule: exac=
+tly; margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;=
+ font-weight: inherit; line-height: 1.15; text-decoration: inherit; font-fa=
+mily: arial;">
+<div style=3D"line-height: 115%; margin: 0; outline: none; padding: 0; colo=
+r: inherit; font-size: inherit; font-weight: inherit; line-height: 1.15; te=
+xt-decoration: inherit; mso-line-height-rule: exactly;" class=3D"" data-lin=
+e-height=3D"1.15">
+<div class=3D"" style=3D"margin: 0; outline: none; padding: 0; color: inher=
+it; font-size: inherit; font-weight: inherit; line-height: inherit; text-de=
+coration: inherit;">
+<div class=3D"" style=3D"margin: 0; outline: none; padding: 0; color: inher=
+it; font-size: inherit; font-weight: inherit; line-height: inherit; text-de=
+coration: inherit;">
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit;" class=3D"">
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit;" class=3D"">
+<div style=3D"margin: 0 0px 0 0px; outline: none; padding: 0; color: inheri=
+t; font-size: inherit; font-weight: inherit; line-height: inherit; text-dec=
+oration: inherit; text-align: start;" class=3D"">
+<div style=3D"margin: 0 0px 0 0px; outline: none; padding: 0; color: inheri=
+t; font-size: inherit; font-weight: inherit; line-height: inherit; text-dec=
+oration: inherit; text-align: left;" class=3D"">
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit; text-align: center;" class=3D"">
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: 16px; font-weight: inherit; line-height: inherit; text-decoration: inhe=
+rit; text-align: center;" class=3D""></div>
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: 16px; font-weight: inherit; line-height: inherit; text-decoration: inhe=
+rit; text-align: center;" class=3D"">
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit; text-align: left;" class=3D"">
+<span class=3D"" style=3D"color: inherit; font-size: 16px; font-weight: inh=
+erit; line-height: inherit; text-decoration: inherit;"><br class=3D""><span=
+ style=3D"color: #000000; font-size: 16px; font-weight: 400; line-height: i=
+nherit; text-decoration: inherit; font-family: arial; font-style: normal;" =
+class=3D"">Hello ,<br></span><br class=3D""><b style=3D"margin: 0; outline:=
+ none; padding: 0; font-weight: normal;"><b style=3D"margin: 0; outline: no=
+ne; padding: 0; font-weight: normal;"><b style=3D"margin: 0; outline: none;=
+ padding: 0; font-weight: normal;"></b></b></b><b style=3D"margin: 0; outli=
+ne: none; padding: 0; font-weight: normal;"><span style=3D"color: #000000; =
+font-size: 16px; font-weight: 400; line-height: inherit; text-decoration: i=
+nherit; font-family: arial; font-style: normal;">You're all set now. Please=
+ finish the last step of your program search at</span><br><span style=3D"co=
+lor: #000000; font-size: 16px; font-weight: 400; line-height: inherit; text=
+-decoration: inherit; font-family: arial; font-style: normal;">your earlies=
+t convenience. It will only take 60 seconds to find a program so I encourag=
+e</span><span style=3D"color: #000000; font-size: 16px; font-weight: 400; l=
+ine-height: inherit; text-decoration: inherit; font-family: arial; font-sty=
+le: normal;"> you to do it now. As mentioned, you may qualify </span><br><s=
+pan style=3D"color: #000000; font-size: 16px; font-weight: 400; line-height=
+: inherit; text-decoration: inherit; font-family: arial; font-style: normal=
+;">for <span class=3D"" style=3D"color: inherit; font-size: inherit; font-w=
+eight: bold; line-height: inherit; text-decoration: inherit;">$<span class=
+=3D"" style=3D"color: inherit; font-size: inherit; font-weight: inherit; li=
+ne-height: inherit; text-decoration: underline;">7,395</span></span> in gra=
+nt money. Please confirm your options now: </span><br><br><a href=3D"https:=
+//tasteoftheoldcountry.acemlna.com/lt.php?x=3D4lZy~GDLJFnLEp8uyd9HV.Sc13zVk=
+_-hkMkwjHnHJ6Kd6pz~_Ey7xuNu1nUhk__f0DYxzKpGJXei5q36zdLNUvFz2I2ljdfylr" styl=
+e=3D"margin: 0; outline: none; padding: 0; color: #045fb4; text-decoration:=
+ underline;" target=3D"_blank"><span class=3D"" style=3D"color: #045fb4; fo=
+nt-size: inherit; font-weight: inherit; line-height: inherit; text-decorati=
+on: inherit;"><span style=3D"color: #045fb4; font-size: 16px; font-weight: =
+bold; line-height: inherit; text-decoration: inherit; font-family: arial; f=
+ont-style: normal;">Click Here</span><span style=3D"color: #045fb4; font-si=
+ze: 16px; font-weight: bold; line-height: inherit; text-decoration: inherit=
+; font-family: arial; font-style: normal;"> To See Your Options</span></spa=
+n></a><br><br><span style=3D"color: #000000; font-size: 16px; font-weight: =
+400; line-height: inherit; text-decoration: inherit; font-family: arial; fo=
+nt-style: normal;">Let me know if you have any questions.</span></b><br><b =
+style=3D"margin: 0; outline: none; padding: 0; font-weight: normal;"><b sty=
+le=3D"margin: 0; outline: none; padding: 0; font-weight: normal;"><b style=
+=3D"margin: 0; outline: none; padding: 0; font-weight: normal;"></b><br></b=
+><br></b></span><b style=3D"margin: 0; outline: none; padding: 0; font-weig=
+ht: normal;" class=3D""><b style=3D"margin: 0; outline: none; padding: 0; f=
+ont-family: arial; color: #000000; font-weight: normal; font-style: normal;=
+" class=3D""><span style=3D"color: #000000; font-size: inherit; font-weight=
+: 400; line-height: inherit; text-decoration: inherit; font-family: arial; =
+font-style: normal;" class=3D"">Skylar<br class=3D""><br class=3D""></span>=
+</b></b>
+<div style=3D"margin: 0; outline: none; padding: 0; color: inherit; font-si=
+ze: inherit; font-weight: inherit; line-height: inherit; text-decoration: i=
+nherit; text-align: center;" class=3D"">
+<b style=3D"margin: 0; outline: none; padding: 0; font-weight: normal; font=
+-size: 8px;" class=3D""><b style=3D"margin: 0; outline: none; padding: 0; f=
+ont-family: arial; color: #000000; font-weight: normal; font-style: normal;=
+" class=3D""><b style=3D"margin: 0; outline: none; padding: 0; font-family:=
+ arial; color: #000000; font-weight: normal; font-style: normal;" class=3D"=
+"><b style=3D"margin: 0; outline: none; padding: 0; font-family: arial; col=
+or: #000000; font-weight: normal; font-style: normal;" class=3D""><b style=
+=3D"margin: 0; outline: none; padding: 0; color: #000000; font-style: norma=
+l; font-family: arial; font-weight: normal;" class=3D""><b style=3D"margin:=
+ 0; outline: none; padding: 0; font-family: arial; color: #000000; font-wei=
+ght: normal; font-style: normal;" class=3D""><b style=3D"margin: 0; outline=
+: none; padding: 0; font-family: arial; color: #000000; font-weight: normal=
+; font-style: normal;" class=3D""><b style=3D"margin: 0; outline: none; pad=
+ding: 0; color: #000000; font-style: normal; font-family: arial; font-weigh=
+t: normal;" class=3D""><b style=3D"margin: 0; outline: none; padding: 0; fo=
+nt-family: arial; color: #000000; font-weight: normal; font-style: normal;"=
+ class=3D""><span style=3D"color: #000000; font-size: inherit; font-weight:=
+ 400; line-height: inherit; text-decoration: inherit; font-family: arial; f=
+ont-style: italic;" class=3D"">*https://studentaid.gov/understand-aid/types=
+/grants/pell</span></b></b></b></b></b></b></b></b></b>
+<br class=3D"">
+</div><b style=3D"margin: 0; outline: none; padding: 0; font-weight: normal=
+;" class=3D""><b style=3D"margin: 0; outline: none; padding: 0; font-family=
+: arial; color: #000000; font-weight: normal; font-style: normal;" class=3D=
+"">
+<div style=3D"margin: 0 0px 0 0px; outline: none; padding: 0; color: #00000=
+0; font-size: 8px; font-weight: 400; line-height: inherit; text-decoration:=
+ inherit; font-family: arial; font-style: normal; text-align: center;" clas=
+s=3D"">
+<a href=3D"https://tasteoftheoldcountry.acemlna.com/lt.php?x=3D4lZy~GDLJFnL=
+Ep8uyd9HV.Sc13zVk_-hkMkwjHnHJ6Kd6pz~_Ey7xuNu1nUhk__f0DYxzKpGJXei5q36zdLNUvF=
+z2I2ljdfzjb" data-ac-default-color=3D"1" target=3D"_blank" style=3D"margin:=
+ 0; outline: none; padding: 0; color: #045FB4; text-decoration: underline;"=
+ class=3D""><span style=3D"color: ; font-size: inherit; font-weight: inheri=
+t; line-height: inherit; text-decoration: inherit;">Advertising Disclosures=
+</span></a>
+</div></b></b>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div51550, #tex=
+t_div51550 div { line-height: 115% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+<tr style=3D"mso-line-height-rule: exactly;">
+<td id=3D"layout-row-margin51575" valign=3D"top" style=3D"mso-line-height-r=
+ule: exactly; padding: 0 20px 0 20px;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: initial !important; font-size: 14px; min-width: 100%; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt;">
+<tr id=3D"layout-row51575" class=3D"layout layout-row widget _widget_text s=
+tyle51575" style=3D"mso-line-height-rule: exactly; margin: 0; padding: 0;">
+<td id=3D"layout-row-padding51575" valign=3D"top" style=3D"mso-line-height-=
+rule: exactly; padding: 0;">
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"-ms-text-size-adjust: auto; -webkit-text-size-adjust: 100%; border-col=
+lapse: collapse; font-size: 14px; min-width: 100%; mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt;">
+<tr style=3D"mso-line-height-rule: exactly;">
+<td id=3D"text_div51552" class=3D"td_text td_block" valign=3D"top" align=3D=
+"left" width=3D"610" style=3D"line-height: 115%; mso-line-height-rule: exac=
+tly; margin: 0; outline: none; padding: 0; color: inherit; font-size: 12px;=
+ font-weight: inherit; line-height: 1.15; text-decoration: inherit; font-fa=
+mily: arial;">
+<div style=3D"line-height: 115%; margin: 0; outline: none; padding: 0; colo=
+r: inherit; font-size: inherit; font-weight: inherit; line-height: 1.15; te=
+xt-decoration: inherit; mso-line-height-rule: exactly;" data-line-height=3D=
+"1.15">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><strong data-start=3D"142" data-end=3D"160" style=3D"margin: 0; outline=
+: none; padding: 0; color: #000000; font-family: arial; font-size: 12px; fo=
+nt-style: normal;"></strong><strong data-start=3D"183" data-end=3D"201" sty=
+le=3D"margin: 0; outline: none; padding: 0;"></strong>Privacy Policy=20
+<br>
+At NoGigiddy, we are dedicated to protecting your privacy and ensuring that=
+ your personal information is handled with care. This Privacy Policy explai=
+ns what information we collect, how we use it, and the measures we take to =
+safeguard your data when you visit our website or use our services.=20
+<br>
+<br>
+Your Consent=20
+<br>
+By accessing our platform, registering for job alerts, or interacting with =
+our communications, you agree to the terms outlined in this Privacy Policy =
+and in our Terms of Service. Your consent may be provided through form subm=
+issions, account creation, or engagement with our online tools and emails.=
+=20
+<br>
+<br>
+Information We Collect=20
+<br>
+To provide a smooth and personalized experience, we gather two types of inf=
+ormation:=20
+<br>
+<br>
+Personal Information:=E2=80=A8Details you submit directly, such as your nam=
+e, email address, phone number, and job preferences when you sign up or com=
+plete forms.=20
+<br>
+<br>
+Technical and Usage Information:=E2=80=A8Automatically collected data inclu=
+ding your IP address, browser type, device identifiers, and interaction act=
+ivity. This information helps improve site performance and user experience.=
+=20
+<br>
+<br>
+How We Use Your Information=20
+<br>
+We use your information to deliver high-quality services and relevant commu=
+nication, including:=20
+<br>
+* Sending remote job alerts based on your preferences=20
+<br>
+* Improving the speed, usability, and reliability of our platform=20
+<br>
+* Sharing updates, service notices, and opportunities that may interest you=
+=20
+<br>
+We do not sell or share your personal information with unrelated third part=
+ies. Marketing messages may be opted out of at any time using the unsubscri=
+be link provided.=20
+<br>
+<br>
+Your Rights and Choices=20
+<br>
+You may access, update, or request deletion of your personal information at=
+ any time by contacting our support team. You can also manage your email pr=
+eferences through any marketing communication you receive. Certain essentia=
+l account or service-related messages may still be sent when needed.=20
+<br>
+<br>
+Data Security and Retention=20
+<br>
+We take reasonable security measures to protect your data from unauthorized=
+ access or misuse. Your information is retained only as long as required fo=
+r legal, operational, or security purposes.=20
+<br>
+<br>
+Third-Party Tools and Links=20
+<br>
+Our platform may include links or integrations from external websites or to=
+ols. These third-party services operate independently, and we encourage you=
+ to review their privacy policies before providing any personal information=
+. NoGigiddy is not responsible for their practices.=20
+<br>
+<br>
+Governing Law=20
+<br>
+This Privacy Policy is governed by the laws of the State of Georgia, United=
+ States. Any disputes or claims related to this policy will be resolved und=
+er applicable Georgia law.=20
+<br>
+<br>
+Policy Updates=20
+<br>
+We may update this Privacy Policy from time to time to reflect changes in o=
+ur operations or legal requirements. Updated versions will be posted on thi=
+s page. Continued use of our site after any changes means you accept the re=
+vised terms.=20
+<br>
+<br>
+Effective Date: November 15, 2025=20
+<br>
+For questions or privacy-related requests, please contact us at support@nog=
+igiddy.com=20
+<br>
+</div><!--[if (gte mso 12)&(lte mso 15) ]>
+<style data-ac-keep=3D"true" data-ac-inline=3D"false"> #text_div51552, #tex=
+t_div51552 div { line-height: 115% !important; };
+</style>
+<![endif]--></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div>
+<br>
+<div id=3D"ac-footer" style=3D"clear:both;background-color:inherit;backgrou=
+nd:inherit;min-width:100%;mso-table-lspace:0pt;mso-table-rspace:0pt;padding=
+:20px;color:#000000;font-size:11px;font-family:arial,helvetica,sans-serif;l=
+ine-height:140%;line-height:1.4;text-align:center;box-sizing:border-box;">
+<center>
+Sent to:<span style=3D"font-size:11px;font-family:arial,helvetica,sans-seri=
+f;font-weight:normal;text-decoration:none;outline:none;">bathanikruti0910@g=
+mail.com</span>
+<br>
+<br><a href=3D"http://tasteoftheoldcountry.activehosted.com/proc.php?c=3D47=
+90&m=3D16883&s=3D879bd2e24244a30e80c741a946b4408d&d=3D3329180&v=3D2&nl=3D84=
+&act=3Dunsub" style=3D"font-size:11px;font-family:arial,helvetica,sans-seri=
+f;font-weight:bold;text-decoration:underline;"><span style=3D"font-weight:b=
+old;text-decoration:underline;">Unsubscribe</span></a>
+<br>
+<br>
+NoGigiddy, 3100 Interstate North Circle Southeast, Suite 200, Atlanta, GA 3=
+0339, United States
+</center>
+</div>
+<br>
+<img src=3D"https://tasteoftheoldcountry.acemlna.com/lt.php?x=3D4TZi05TKKnE=
+KHhVp0_HOghRtAX6kidLyvugvkHjDUFed583Az_E5V.Rr3KCRvEXxjMc4XHjDkrcK5O41NAoFhR=
+7cCeEhjdb2jTdtm.LLJU" border=3D"0" width=3D"1" height=3D"1" style=3D"displa=
+y:block;width:1px!important;min-width:1px!important;max-width:1px!important=
+;height:1px!important;border:0;overflow:hidden;"/>
+</body>
+</html>
+------=_Part_7325215_1287201833.1763234201895--

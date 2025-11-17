@@ -1,0 +1,1232 @@
+Delivered-To: krutibenhareshbhai.bathani@sjsu.edu
+Received: by 2002:a05:6a10:6c7:b0:678:b2a8:8b7a with SMTP id c7csp1433680pxv;
+        Mon, 17 Nov 2025 10:02:43 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IExdGCNoCJugg84PLX2CLjA7qNKzi2av74IZAj8wH4J4tV+FcdnJGlIvHvzdrfp4ceGoqXR
+X-Received: by 2002:a17:903:1b2f:b0:295:3f35:a312 with SMTP id d9443c01a7336-2986a6cfeefmr148197155ad.20.1763402563120;
+        Mon, 17 Nov 2025 10:02:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763402563; cv=none;
+        d=google.com; s=arc-20240605;
+        b=W1JQ2lT+V8eihNh/ADH63gsC4scNdQXrdI4l/faG1k1JqEns6QyxkfozIgCcifnj/v
+         Z2hdYYZMKQ8A9mLzoaOEWu1NbeJck1u1wyvZtLDUJnFjJ5oTc/bCf9Bal37nEKbcjbkv
+         PLMzd4lDYK/svGSIZK6r9xQSUxnY5/99cynM2y5DvEAzZ1qjhVxxZ0yO6in0In2Oj6S0
+         uDfiz05FJaxeOumAgMtr1uit7oUErkrJsmtQXEhUe9K/IbWGozWYWDRZdUkJcF3mI8V1
+         BX0RsguOt/xGxuDIVd1a/v0KIx7fvdcmcO9mbHvCmdZxZjTxa/55jpt5h0ZrkCCsmL/X
+         DHRw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:list-unsubscribe-post:mime-version:subject
+         :message-id:to:reply-to:from:date:dkim-signature:dkim-signature;
+        bh=Bku3yeIEaue/yNTQ4l6bEAaX6AU3gGsy1ncCp4X0E0c=;
+        fh=P5bZxWm3SWqb6HCpkmMBO3zqtV7HmANSekyDBUZLWis=;
+        b=T09D8Rc0Ala37cS8u2NUNQ0kQOWrGwK2JRK7W4Wb9/+eTn/NhTVWUF5Pr2/wrwSoo6
+         3qtx63cmiYvUqZJQQ7MHHLSqlJHomJIfP3mC5GPCk9HG9a15I++I0/lrH1RwMMmdGxSP
+         icUMTd+eRWcGtZPpP0JBAenmwJaBk74milrFPPcrQuA44AAVffxHmRjmmSFCRi2Q2KpY
+         UvtiUG9Zx3k1pZAJ5ya1mNdRM4tg8P62Q3HsI5vyZnXPMUyRnRuZ5KPhcImTQV19wfEV
+         lXD0M56Qp/g7sQscDTvkTtA28w255EwxgllR+Bm/gSfUewf34MMW1QKiNFPX4qvKL3yl
+         Tn6A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.tricentis.com header.s=m1 header.b=VB3AWQQX;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=Gdyl0WcD;
+       spf=pass (google.com: domain of 070-pyt-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com designates 192.28.156.106 as permitted sender) smtp.mailfrom=070-PYT-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=tricentis.com
+Return-Path: <070-PYT-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com>
+Received: from bounce.tricentis.com (bounce.tricentis.com. [192.28.156.106])
+        by mx.google.com with ESMTPS id d9443c01a7336-2985c2ccc5dsi70754185ad.711.2025.11.17.10.02.42
+        for <krutibenhareshbhai.bathani@sjsu.edu>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 17 Nov 2025 10:02:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of 070-pyt-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com designates 192.28.156.106 as permitted sender) client-ip=192.28.156.106;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.tricentis.com header.s=m1 header.b=VB3AWQQX;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=Gdyl0WcD;
+       spf=pass (google.com: domain of 070-pyt-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com designates 192.28.156.106 as permitted sender) smtp.mailfrom=070-PYT-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=tricentis.com
+X-MSFBL: 2xsU7VO40xJohQB8/83nDjlKO82w+A0erkgnVfXwFFk=|eyJ1IjoiMDcwLVBZVC0
+	1NzA6MDo3MDU1MTo3MzkwMjQ6MjA2OTAyNTozMTI3NDQ6OTo4MDk0MTo2ODgyNDE
+	4LTQiLCJyIjoia3J1dGliZW5oYXJlc2hiaGFpLmJhdGhhbmlAc2pzdS5lZHUiLCJ
+	nIjoiYmctc2pkLTY0NSIsImIiOiJkdnAtMTkyLTI4LTE1Ni0xMDYifQ==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1763402561;
+	s=m1; d=e.tricentis.com; i=@e.tricentis.com;
+	h=List-Unsubscribe:List-Unsubscribe-Post:Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=Bku3yeIEaue/yNTQ4l6bEAaX6AU3gGsy1ncCp4X0E0c=;
+	b=VB3AWQQX/8EXGM6V2mw6t7kVgujszB3NMrnhLeCP48jn3j9/yaUwZRfRyJapNhgk
+	igkiPGuGFqaP24WuDinWZAehOojUGfsTVk8qjDg/5Sk6uajAXxgqrjsEutWX+lyH15S
+	DSdqWtfLMsBJ6fNsAdIsx1CA0cnfLNwEm38MGBTY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1763402561;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=List-Unsubscribe:List-Unsubscribe-Post:Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=Bku3yeIEaue/yNTQ4l6bEAaX6AU3gGsy1ncCp4X0E0c=;
+	b=Gdyl0WcDqE9EvHYQL8vIKFy1Mo5i+YJOTk7HSl8svwzQ36DuE7mpah0cXWuzjAdP
+	XyAmp5BzhIxuFuDY3Dj4x0mZYooSwZ23jKkw7VWUOx15WzBLxNiQVW9xLdkktzVl4yh
+	UsGYiWP8khc37UfcysBZRMJXLL8/8IMgOPKR/QC0=
+Date: Mon, 17 Nov 2025 12:02:41 -0600 (CST)
+From: Tricentis Transform <events@e.tricentis.com>
+Reply-To: events@tricentis.com
+To: krutibenhareshbhai.bathani@sjsu.edu
+Message-ID: <1317666875.139825211.1763402561448@sjmktmail-batch1l.marketo.org>
+Subject: Watch Transform 2025 on demand - Where innovation meets impact
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_139825209_1209555872.1763402561448"
+X-Binding: bg-sjd-645
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://i.tricentis.com/u/MDcwLVBZVC01NzAAAAGeMfRnozm_BdAESPFThIzUK-g35N2PKrwUiIN9Prj6fIVXupfHrwha2AQ0CR-ckPKHmiIuGOk=?emailAddress=MDcwLVBZVC01NzAAAAGeMfRnorlYGVaFjMIyaQUqXXo_qujuew6ylg-ayCePxpEkJCFBNgZB-dtMctoAig_aJWlg6qfAkosE3zL5nbbFXYP7SQ>, <mailto:JRDG4LKBME2WQQZXPFEWGYRZNVTHCZTGO5TT2PI=.80941.312744.9@unsub-sj.mktomail.com>
+X-MarketoID: 070-PYT-570:0:70551:739024:2069025:312744:9:80941:6882418-4
+X-Mailfrom: 070-PYT-570.0.80941.0.0.312744.9.6882418-4@bounce.tricentis.com
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_139825209_1209555872.1763402561448
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+This email was sent to krutibenhareshbhai.bathani@sjsu.edu. If you no longer wish to receive these emails you may unsubscribe here: https://www.tricentis.com/preference-center?mkt_unsubscribe=1&mkt_tok=MDcwLVBZVC01NzAAAAGeMfRnoytHByOf6G1ySWC8Wj1pUt9AoBSGHwVHOc-OEDVdZmrh6rYIAoItjgpE_RDAPmZ5qvGtDV0on4_h_wK5wUEfySvtKVEUeqS-DB2H5ucYFA.
+
+------=_Part_139825209_1209555872.1763402561448
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>=20
+<!--[if gte mso 9]><xml>
+=09=09=09<o:OfficeDocumentSettings>
+=09=09=09<o:AllowPNG/>
+=09=09=09<o:PixelsPerInch>96</o:PixelsPerInch>
+=09=09=09</o:OfficeDocumentSettings>
+=09=09=09</xml>
+=09=09<![endif]-->=20
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />=
+=20
+<meta name=3D"HandheldFriendly" content=3D"true" />=20
+<meta name=3D"MobileOptimized" content=3D"320" />=20
+<meta name=3D"viewport" content=3D"width=3Ddevice-width" />=20
+<title></title>=20
+<!--[if !mso]><!-->=20
+<link href=3D"https://fonts.googleapis.com/css2?family=3DOpen+Sans:ital,wgh=
+t@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&a=
+mp;display=3Dswap" rel=3D"stylesheet" type=3D"text/css" />=20
+<!--<![endif]-->=20
+<style type=3D"text/css">
+   =20
+    span, td, table, div {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .st-email-body{
+        width:100% !important;
+        -webkit-text-size-adjust: 100%;
+        margin: 0 auto!important;
+        padding: 0px;
+        background-color: #ffffff;
+    }
+
+    span.st-preheader{
+        display: none!important;
+    }
+
+   =20
+    td img + div {
+        display: none;
+    }
+
+   =20
+    a[href^=3D"tel"],
+    a[href^=3D"sms"]{text-decoration: none; color: inherit !important; poin=
+ter-events: none; cursor: default;}
+    u + .st-email-body a {color: inherit; text-decoration: none; font-size:=
+ inherit; font-family: inherit; font-weight: inherit; line-height: inherit;=
+}
+   =20
+    *[x-apple-data-detectors] {color: inherit !important; text-decoration: =
+none !important; font-size: inherit !important; font-family: inherit !impor=
+tant; font-weight: inherit !important; line-height: inherit !important;}
+
+    a,a:hover,a:link,a:visited {
+        text-decoration:none !important;
+        outline: none;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+   =20
+    .st-hide-desktop {
+        display:none;
+        font-size:0;
+        height:0;
+        min-height:0;
+        max-height:0;
+        line-height:0;
+        mso-hide:all;
+    }
+
+    .st-gmail-fix { display: none !important; }
+
+    strong {
+        font-weight: bold;
+    }
+    </style>=20
+<style>
+
+@media screen and (max-width: 480px) {
+           =20
+                            .st-col,.st-mobile-full-width,.st-module-wrappe=
+r-table,.st-wrapper,.st-wrapper-table{width:100%!important}.st-col{padding:=
+0!important}.st-resize{width:100%!important}.st-mobile-width-constraint,.st=
+-resize{display:block!important;height:auto!important}.st-mobile-width-cons=
+traint{max-width:100%!important}.st-equal-height,.st-height-auto{height:aut=
+o!important}.st-hide-desktop{display:table-row!important}.st-hide-mobile{di=
+splay:none!important}.st-mobile-inline{display:inline!important}.show-img-m=
+obile{display:table-row!important;width:100%!important;float:none;overflow:=
+visible!important;height:auto!important}
+                .st-dynamic-hp7br63bhgn8y { width:0px !important; }
+.st-dynamic-aeosdnko98e0x { height:0px !important; }
+.st-dynamic-qiu94hkqtivb4, u + .st-email-body .st-dynamic-qiu94hkqtivb4 img=
+ { width:100%!important;max-width:95px!important; }
+.st-dynamic-5q93f7hy12cbe { padding-left:0px!important;padding-right:0px!im=
+portant; }
+.st-dynamic-6r0hv9h3ozx7g, .st-dynamic-6r0hv9h3ozx7g p, .st-dynamic-6r0hv9h=
+3ozx7g p { text-align:center!important; }
+.st-dynamic-qca1hetdgrxey, .st-dynamic-qca1hetdgrxey p { text-align:left!im=
+portant; }
+.st-dynamic-cu4uixqjr4v9f { padding-top:10px!important;padding-bottom:10px!=
+important;background-image:url(https://www.emailimagecdnhylz.com/ibja086q4s=
+/en_us/images/67532ae7e7324-1733503719.947.jpg)!important;padding-right:20p=
+x!important;padding-left:20px!important; }
+.st-dynamic-wyhbcihcfs3ys { padding-right:10px!important;padding-top:5px!im=
+portant;padding-bottom:5px!important;padding-left:10px!important; }
+.st-dynamic-p6k8kmo16bl5c { padding-left:20px!important; }
+.st-dynamic-jvsm9135vmevx, u + .st-email-body .st-dynamic-jvsm9135vmevx img=
+ { width:100%!important;max-width:25px!important; }               =20
+                .st-wrapper-table{
+                    width: 100%!important;
+                    max-width: 480px!important;
+                    margin: 0 auto;
+                }
+                    }
+                    #MessageViewBody .st-module-wrapper-table  {margin-top:=
+-1px}
+            @media (max-width:599px) and (min-width:481px) {.st-module-wrap=
+per-table {margin-top:-1px !important;} }
+            div > u + .body .st-module-wrapper-table {margin-top:0px !impor=
+tant}
+            </style>=20
+<!--[if !mso]><!-->=20
+<style>
+    ul, ol {margin-left:15px; padding-left:0px}
+    </style>=20
+<!--<![endif]-->=20
+<!--[if mso]>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+
+                span.MsoHyperlink {
+            mso-style-priority:99;
+            color:inherit;
+        }
+        span.MsoHyperlinkFollowed {
+            mso-style-priority:99;
+            color:inherit;
+        }
+        ol li, ul li {margin-top:0px !important;margin-bottom:0px !importan=
+t;}
+    </style>
+<![endif]-->=20
+<!--[if gte mso 9]>
+    <style>
+        .st-mso-full-width{
+            width: 100%;
+        }
+            </style>
+<![endif]-->=20
+<!--[if IEMobile]>
+    <style type=3D"text/css">
+        .st-mso-full-width{
+            width: 100%;
+        }
+    </style>
+<![endif]-->=20
+<!--[if gte mso 16]>
+    <style>
+    ul li {mso-special-format: bullet;}
+    </style>
+<![endif]-->=20
+<style>
+.blue-text a[x-apple-data-detectors]{
+color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+}
+
+.blue-text a{=20
+            color:inherit !important;=20
+            text-decoration: none !important;=20
+}
+
+#MessageViewBody a {
+  color: inherit! important;
+  text-decoration: none! important;
+  font-size: inherit! important;
+  font-family: inherit! important;
+  font-weight: inherit! important;
+  line-height: inherit! important;
+}
+
+.aligned-bullets ul{list-style-position: outside!important;}
+.aligned-bullets ol{list-style-position: outside!important;} =20
+.uppercase span {text-transform: uppercase;}
+
+
+@media all and (max-width: 480px) {
+.w84 {width:84px!important;}
+.w102 {width:102px!important;}=20
+ =20
+.w113 {width:113px!important;}
+.w126 {width:126px!important;} =20
+.w88 {width:88px!important;}=20
+.w111 {width:111px!important;} =20
+ =20
+.w106 {min-width:106px!important;} =20
+.w134 {min-width:134px!important;} =20
+.w145 {min-width:145px!important;}   =20
+.w185 {width:185px!important;}
+.w189 {width:189px!important;}
+.minw95{min-width:95px!important;}   =20
+.min-w147{min-width:147px!important;} =20
+.mob-ps-0{padding-right:0px!important;padding-left:0px!important;}
+.mob-ps-10{padding-right:10px!important;padding-left:10px!important;} =20
+.mob-ps-20{padding-right:20px!important;padding-left:20px!important;} =20
+.mob-pb-20{padding-bottom:20px!important;}
+.mob-pt-20{padding-top:20px!important;}
+
+}
+</style>=20
+<style>
+@media (prefers-color-scheme: dark) {
+  .dark-mode-text {color:#FFC0CB !important;}
+  .dark-mode-text p {color:#FFC0CB !important;}
+  .dark-mode-text span {color:#FFC0CB !important;}
+}
+</style>=20
+<!--[if mso]>
+    <style>
+=09.mso-lh-exactly p {mso-line-height-rule:exactly;}
+=09.mso-lh-exactly span {mso-line-height-rule:exactly;}
+    </style>
+<![endif]-->=20
+</head>=20
+<body class=3D"st-email-body st-center-gmail">=20
+<div style=3D"font-size:0px; display:none; visibility:hidden; opacity:0; co=
+lor:transparent; max-height:0px; height:0; width:0; mso-hide:all;">
+ Check out the highlights =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD=
+ =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD &nbsp;=20
+</div>=20
+<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" bgcolor=3D"#E5E5E5" class=3D"st-wrapper-table" style=3D=
+"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" bgcolor=3D"#E5E5E5" align=3D"center">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-background=
+ st-module-wrapper-table" style=3D"width: 600px;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" bgcolor=3D"#E5E5E5" valign=3D"top" style=3D"width: 100%;=
+">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"padding: 0px; w=
+idth: 100%;"> <p height=3D"20" width=3D"100%" style=3D"mso-line-height-rule=
+:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%=
+; width: 100%; height: 20px; max-height: 20px; margin: 0px; font-size: 20px=
+; line-height: 20px"> &nbsp; </p> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" bgcolor=3D"#E5E5E5" align=3D"center" styl=
+e=3D"background-repeat: no-repeat; background-position: 100% 0%; background=
+-size: cover;">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-background=
+ st-module-wrapper-table" style=3D"width: 600px;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" bgcolor=3D"#FFFFFF" background=3D"https://www.emailimage=
+cdnhylz.com/ibja086q4s/en_us/images/672bca9a359ff-1730923162.2197.jpg" vali=
+gn=3D"top" class=3D"st-dynamic-cu4uixqjr4v9f" style=3D"width: 100%; backgro=
+und-repeat: no-repeat; background-position: 100% 0%; background-size: cover=
+;">
+<!--[if gte mso 9]>
+                    <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=
+=3D"true" strokecolor=3D"none" style=3D"width:450.00pt; height:45.00pt;" st=
+roke=3D"false">
+                    <v:fill
+                      type=3D"frame"
+                      src=3D"https://www.emailimagecdnhylz.com/ibja086q4s/e=
+n_us/images/672bca9a359ff-1730923162.2197.jpg"
+                      position=3D"0, 0.1444"
+                      size=3D"450.00pt,58.85pt"
+                      color=3D"#FFFFFF"
+                    />
+                    <v:textbox inset=3D"0,0,0,0">
+                  <![endif]-->=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"20" class=3D"bgi-padding-left st-dynamic-hp7br63bhgn8y" style=
+=3D"width: 20px;"></td>=20
+<td align=3D"center">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr class=3D"bgi-padding-top">=20
+<td valign=3D"top"> <p height=3D"20" class=3D"st-dynamic-aeosdnko98e0x" sty=
+le=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-line-he=
+ight-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; line-height:=
+20px; font-size: 20px; height: 20px; max-height: 20px; margin: 0px auto; wi=
+dth: 100%"> &nbsp; </p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" align=3D"left" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"200" valign=3D"middle" class=3D"w113" style=3D"width: 200px;">=
+=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-qiu94h=
+kqtivb4" style=3D"padding-left: 20px; width: 100%;"><a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnon0CMscdKl0S1XpyzYUJipGL6A=
+rYr-ANaXoxw8tjSYPeDK6VkZQO-VfLZ71R71xXnGs=3D" target=3D"_blank" style=3D"di=
+splay: block;"
+><img border=3D"0" valign=3D"top" width=3D"95" src=3D"https://www.emailimag=
+ecdnhylz.com/ibja086q4s/en_us/images/63ebbc4cb085e-1676393548.723.png" alt=
+=3D"Tricentis logo" class=3D"st-mobile-width-constraint" style=3D"border: 0=
+px; display: block; width: 95px; max-width: 100%;" /> </a></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+<td width=3D"134" valign=3D"middle" class=3D"w126" style=3D"width: 134px;">=
+=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-5q93f7=
+hy12cbe st-dynamic-6r0hv9h3ozx7g" style=3D"padding-left: 10px; padding-righ=
+t: 10px; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans=
+-serif; color: #2b2b2b; font-size: 11px; font-weight: 700; letter-spacing: =
+normal; line-height: 15px; width: 100%;"> <p style=3D"margin: 0px; text-ali=
+gn: center;"><span style=3D"font-size: 11px; line-height: 15px;"><a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnox78QLUfqG4e5UIipRd-d6WrqE=
+-NUrHGmdPS90R75M1PJSqg05QYRJaJA8MWcq4THj0=3D" style=3D"color: #2b2b2b;"
+><span style=3D"color: #2b2b2b;">Contact</span></a></span></p> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+<td width=3D"97" valign=3D"middle" class=3D"w88" style=3D"width: 97px;">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-5q93f7=
+hy12cbe st-dynamic-qca1hetdgrxey" style=3D"padding-left: 10px; padding-righ=
+t: 10px; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans=
+-serif; color: #2b2b2b; font-size: 11px; font-weight: 700; letter-spacing: =
+normal; line-height: 15px; width: 100%;"> <p style=3D"margin: 0px; text-ali=
+gn: center;"><span style=3D"font-size: 11px; line-height: 15px; color: #2b2=
+b2b;"><a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnopsTfKYWVe_afipFMkTx8Q10j6=
+Hj53N4tc8aq0DD5U1rHz1mkCNo0oVaJ4LWz4trLoA=3D" style=3D"color: #2b2b2b;"
+>Community</a></span></p> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+<td width=3D"129" valign=3D"middle" class=3D"w111" style=3D"width: 129px;">=
+=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-5q93f7=
+hy12cbe st-dynamic-6r0hv9h3ozx7g" style=3D"padding-left: 10px; padding-righ=
+t: 10px; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans=
+-serif; color: #2b2b2b; font-size: 11px; font-weight: 700; letter-spacing: =
+normal; line-height: 15px; width: 100%;"> <p style=3D"margin: 0px; text-ali=
+gn: right;"><span style=3D"font-size: 11px; line-height: 15px; color: #ffff=
+ff;"><a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnokB15ICD-oy6mgXFMKHOFXs_WL=
+qJlBIlyvVAsfihXK3mUuGniq-oH_coBjdddl7kh0I=3D" style=3D"color: #ffffff;"
+>Trials &amp; demos =E2=86=92</a></span></p> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<!--[if !gte mso 9]><!-->=20
+<tr class=3D"bgi-padding-bottom">=20
+<td valign=3D"top"> <p height=3D"20" class=3D"st-dynamic-aeosdnko98e0x" sty=
+le=3D"-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; mso-line-he=
+ight-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; line-height:=
+20px; font-size: 20px; height: 20px; max-height: 20px; margin: 0px auto; wi=
+dth: 100%"> &nbsp; </p> </td>=20
+</tr>=20
+<!--<![endif]-->=20
+</tbody>
+</table> </td>=20
+<td width=3D"20" class=3D"bgi-padding-right st-dynamic-hp7br63bhgn8y" style=
+=3D"width: 20px;"></td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+                    </v:textbox>
+                    </v:rect>
+                  <![endif]--> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" bgcolor=3D"#E5E5E5" align=3D"center" styl=
+e=3D"background-repeat: no-repeat; background-position: 100% 100%; backgrou=
+nd-size: cover;">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-background=
+ st-module-wrapper-table" style=3D"width: 600px;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" bgcolor=3D"#1B365D" background=3D"https://www.emailimage=
+cdnhylz.com/ibja086q4s/en_us/images/69134ed68a92b-1762873046.5676.png" vali=
+gn=3D"top" class=3D"st-dynamic-p6k8kmo16bl5c" style=3D"width: 100%; backgro=
+und-repeat: no-repeat; background-position: 100% 100%; background-size: cov=
+er;">
+<!--[if gte mso 9]>
+                    <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=
+=3D"true" strokecolor=3D"none" style=3D"width:450.00pt; height:142.50pt;" s=
+troke=3D"false">
+                    <v:fill
+                      type=3D"frame"
+                      src=3D"https://www.emailimagecdnhylz.com/ibja086q4s/e=
+n_us/images/69134ed68a92b-1762873046.5676.png"
+                      position=3D"0, -0.0317"
+                      size=3D"450.00pt,151.50pt"
+                      color=3D"#1B365D"
+                    />
+                    <v:textbox inset=3D"0,0,0,0">
+                  <![endif]-->=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"20" class=3D"bgi-padding-left st-dynamic-hp7br63bhgn8y" style=
+=3D"width: 20px;"></td>=20
+<td align=3D"center">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr class=3D"bgi-padding-top">=20
+<td valign=3D"top"> <p height=3D"0" style=3D"-webkit-text-size-adjust:100%;=
+ -ms-text-size-adjust:100%; mso-line-height-rule:exactly; mso-table-lspace:=
+0pt; mso-table-rspace:0pt; line-height:0px; font-size: 0px; height: 0px; ma=
+x-height: 0px; margin: 0px auto; width: 100%"> &nbsp; </p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"20" style=3D"width: 20px;"></td>=20
+<td align=3D"center">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"520" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 520px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"520">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" class=3D"mob-ps-20" styl=
+e=3D"padding: 0px; width: 100%;"> <p height=3D"15" width=3D"100%" style=3D"=
+mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; t=
+ext-size-adjust:100%; width: 100%; height: 15px; max-height: 15px; margin: =
+0px; font-size: 15px; line-height: 15px"> &nbsp; </p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"text-align: left;=
+ font-family: 'Open Sans', Arial, Helvetica, sans-serif; color: #d2d755; fo=
+nt-size: 12px; font-weight: 700; letter-spacing: 0.05em; line-height: 17px;=
+ padding-top: 5px; padding-bottom: 10px; width: 100%;"> <p style=3D"margin:=
+ 0px;">Tricentis Transform 2025</p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"text-align: left;=
+ font-family: 'Open Sans', Arial, Helvetica, sans-serif; font-size: 20px; f=
+ont-weight: normal; letter-spacing: normal; line-height: 28px; padding-bott=
+om: 5px; width: 100%;"> <p style=3D"margin: 0px;"><span style=3D"color: #ff=
+ffff;">Conference sessions are now available on demand!</span></p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"padding-right: 11=
+0px; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-ser=
+if; font-size: 14px; font-weight: 400; letter-spacing: normal; line-height:=
+ 21px; padding-bottom: 15px; width: 100%;"> <p style=3D"margin: 0px;"><span=
+ style=3D"color: #ffffff; font-size: 15px; line-height: 23px;">See how AI i=
+s reshaping testing, ERP projects, </span></p> <p style=3D"margin: 0px;"><s=
+pan style=3D"color: #ffffff; font-size: 15px; line-height: 23px;">and workf=
+orce transformation</span></p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-5q93f7=
+hy12cbe" style=3D"padding-bottom: 25px; width: 100%;">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"border-collapse: initial;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" bgcolor=3D"#EE6D32" align=3D"center" height=3D"14" valig=
+n=3D"middle" style=3D"mso-padding-alt:5px 10px 5px 10px; height:14px; width=
+: 100%; text-align: center; background-color: #ee6d32; vertical-align: midd=
+le"> <a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnol0GKBgB9FN0y7eQdXF-XxiErq=
+b_jANC-FBs7yEA7oEf6W36oFzavwDbwaq3FkFpLmE=3D" target=3D"_blank" title=3D"" =
+bgcolor=3D"#EE6D32" valign=3D"middle" class=3D"st-dynamic-wyhbcihcfs3ys" st=
+yle=3D"mso-line-height-rule:exactly; text-align:center; font-family: 'Open =
+Sans', Arial, Helvetica, sans-serif; color: #ffffff; font-size: 10px; font-=
+weight: 700; letter-spacing: normal; line-height: 14px; padding: 5px 10px; =
+text-decoration: none; display: table-cell; height: 14px; border-radius: 0p=
+x; vertical-align: middle; box-sizing: content-box"
+> <span style=3D"text-align: center; color: #ffffff; margin: 0px;">Watch no=
+w</span></a> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+<td width=3D"20" style=3D"width: 20px;"></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"20" style=3D"width: 20px;"></td>=20
+<td align=3D"center">
+<!--[if gte mso 9]>
+        <table role=3D"presentation" width=3D"405.00pt" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" style=3D"width:405.00pt; border-collapse: col=
+lapse; table-width: fixed;" align=3D"center" >
+          <tr>
+            <td width=3D"99.75pt" style=3D"width:99.75pt" valign=3D"top">
+            <![endif]-->=20
+<table role=3D"presentation" align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"133" class=3D"st-mso-full-width st-mobile-full=
+-width" style=3D"width: 133px; float: left;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" height=3D"0" valign=3D"top" width=3D"133" class=3D"st-=
+equal-height">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+            </td>
+            <td width=3D"149.25pt" style=3D"width: 149.25pt" align=3D"left"=
+ valign=3D"top">
+              <![endif]-->=20
+<table role=3D"presentation" align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"199" class=3D"st-mso-full-width st-mobile-full=
+-width" style=3D"width: 199px; float: left;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" height=3D"0" valign=3D"top" width=3D"199" class=3D"st-=
+equal-height">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+            </td>
+            <td width=3D"156.00pt" style=3D"width: 156.00pt" align=3D"left"=
+ valign=3D"top">
+              <![endif]-->=20
+<table role=3D"presentation" align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"208" class=3D"st-mso-full-width st-mobile-full=
+-width" style=3D"width: 208px; float: left;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" height=3D"0" valign=3D"top" width=3D"208" class=3D"st-=
+equal-height">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+            </td>
+          </tr>
+        </table>
+      <![endif]--> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<!--[if !gte mso 9]><!-->=20
+<tr class=3D"bgi-padding-bottom">=20
+<td valign=3D"top"> <p height=3D"0" style=3D"-webkit-text-size-adjust:100%;=
+ -ms-text-size-adjust:100%; mso-line-height-rule:exactly; mso-table-lspace:=
+0pt; mso-table-rspace:0pt; line-height:0px; font-size: 0px; height: 0px; ma=
+x-height: 0px; margin: 0px auto; width: 100%"> &nbsp; </p> </td>=20
+</tr>=20
+<!--<![endif]-->=20
+</tbody>
+</table> </td>=20
+<td width=3D"20" class=3D"bgi-padding-right" style=3D"width: 20px;"></td>=
+=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+                    </v:textbox>
+                    </v:rect>
+                  <![endif]--> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" bgcolor=3D"#E5E5E5" align=3D"center">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-background=
+ st-module-wrapper-table" style=3D"width: 600px;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" bgcolor=3D"#FFFFFF" valign=3D"top" class=3D"mob-ps-20" s=
+tyle=3D"width: 100%; padding-right: 20px; padding-bottom: 20px; padding-lef=
+t: 20px;">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"padding-right: 20=
+px; padding-left: 20px;">=20
+<table role=3D"presentation" dir=3D"ltr" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" width=3D"520" class=3D"st-mso-full-width st-mobile-full-widt=
+h" style=3D"width: 520px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"520" class=3D"mso-lh-exactly">=
+=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"padding: 0px; w=
+idth: 100%;"> <p height=3D"20" width=3D"100%" style=3D"mso-line-height-rule=
+:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%=
+; width: 100%; height: 20px; max-height: 20px; margin: 0px; font-size: 20px=
+; line-height: 20px"> &nbsp; </p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"aligned-bullets" =
+style=3D"text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans=
+-serif; color: #2b2b2b; font-size: 15px; font-weight: 400; letter-spacing: =
+normal; line-height: 24px; width: 100%;"> <p style=3D"margin: 0px;">Hi Krut=
+i,</p> <p style=3D"margin: 0px;">=E2=80=8C<br /></p> <p style=3D"margin: 0p=
+x;">We=E2=80=99re sorry we missed you at <strong>Tricentis Transform 2025</=
+strong> =E2=80=94 our flagship event in <strong>Nashville</strong> and <str=
+ong>London</strong> brought together quality engineering leaders, innovator=
+s, and practitioners from around the world for two inspiring days of learni=
+ng, connection, and innovation.</p> <p style=3D"margin: 0px;">=E2=80=8C<br =
+/></p> <p style=3D"margin: 0px;"><strong>Sessions are now available from bo=
+th locations on demand </strong>=E2=80=94 featuring <strong>real-world succ=
+ess stories, ERP modernization insights, AI trends, and best practices</str=
+ong> shaping the future of quality engineering.</p> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"padding-top: 15px=
+; padding-bottom: 40px; width: 100%;">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"border-collapse: initial;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" align=3D"center" height=3D"12" valign=3D"middle" style=
+=3D"mso-padding-alt:0px 0px 0px 0px; height:12px; width: 100%; text-align: =
+center; vertical-align: middle"> <a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnol0GKBgB9FN0y7eQdXF-XxiErq=
+b_jANC-FBs7yEA7oEf6W36oFzavwDbwaq3FkFpLmE=3D" target=3D"_blank" title=3D"" =
+valign=3D"middle" style=3D"mso-line-height-rule:exactly; text-align:center;=
+ font-family: 'Open Sans', Arial, Helvetica, sans-serif; color: #ff6c0e; fo=
+nt-size: 12px; font-weight: 600; letter-spacing: normal; line-height: 16px;=
+ text-decoration: none; display: table-cell; height: 12px; border-radius: 0=
+px; vertical-align: middle; box-sizing: content-box"
+> <span style=3D"margin: 0px; color: #ff6c0e;"><span style=3D"font-size: 15=
+px; line-height: 20px;">Watch on demand=E2=86=92</span></span></a> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"aligned-bullets" =
+style=3D"text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans=
+-serif; color: #2b2b2b; font-size: 15px; font-weight: 400; letter-spacing: =
+normal; line-height: 24px; width: 100%;"> <p style=3D"margin: 0px;">We hope=
+ you enjoy the sessions and look forward to seeing you at Transform next ye=
+ar!</p> <p style=3D"margin: 0px;"><br />The Tricentis team</p> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"padding-right: 20=
+px; padding-left: 20px;">
+<!--[if gte mso 9]>
+        <table role=3D"presentation" width=3D"390.00pt" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" style=3D"width:390.00pt; border-collapse: col=
+lapse; table-width: fixed;" align=3D"center" >
+          <tr>
+            <td width=3D"210.75pt" style=3D"width:210.75pt" valign=3D"top">
+            <![endif]-->=20
+<table role=3D"presentation" align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"281" class=3D"st-mso-full-width st-mobile-full=
+-width" style=3D"width: 281px; float: left;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" height=3D"0" valign=3D"top" width=3D"281" class=3D"st-=
+equal-height">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+            </td>
+            <td width=3D"179.25pt" style=3D"width: 179.25pt" align=3D"left"=
+ valign=3D"top">
+              <![endif]-->=20
+<table role=3D"presentation" align=3D"left" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" width=3D"239" class=3D"st-mso-full-width st-mobile-full=
+-width" style=3D"width: 239px; float: left;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" height=3D"0" valign=3D"top" width=3D"239" class=3D"st-=
+equal-height">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table>=20
+<!--[if gte mso 9]>
+            </td>
+          </tr>
+        </table>
+      <![endif]--> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" bgcolor=3D"#E5E5E5" align=3D"center">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"600" class=3D"st-wrapper st-wrapper-background=
+ st-module-wrapper-table" style=3D"width: 600px;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" bgcolor=3D"#000000" valign=3D"top" style=3D"width: 100%;=
+">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" align=3D"center" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#1B365D" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" style=3D"text-align: left;=
+ font-family: 'Open Sans', Arial, Helvetica, sans-serif; color: #ffffff; fo=
+nt-size: 12px; font-weight: 600; letter-spacing: normal; line-height: 17px;=
+ padding: 25px 40px; width: 100%;"> <p style=3D"margin: 0px; text-align: ju=
+stify;"><span style=3D"font-size: 12px; line-height: 17px;"><sup><span styl=
+e=3D"line-height: 17px;">Tricentis is a global leader in continuous testing=
+ and quality engineering. The Tricentis AI-based, continuous testing portfo=
+lio of products provide a new and fundamentally different way to perform so=
+ftware testing. An approach that=E2=80=99s totally automated, fully codeles=
+s, and intelligently driven by AI. It addresses both agile development and =
+complex enterprise apps, enabling enterprises to accelerate their digital t=
+ransformation by dramatically increasing software release speed, reducing c=
+osts, and improving software quality.</span></sup></span></p> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#1B365D" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#1B365D" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#1B365D" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#1B365D" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#000000" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" align=3D"left" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"120" valign=3D"top" bgcolor=3D"#000000" style=3D"width: 120px;=
+">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+</table> </td>=20
+<td width=3D"120" valign=3D"top" bgcolor=3D"#000000" style=3D"width: 120px;=
+">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+</table> </td>=20
+<td width=3D"120" valign=3D"top" bgcolor=3D"#000000" style=3D"width: 120px;=
+">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+</table> </td>=20
+<td width=3D"120" valign=3D"top" style=3D"width: 120px;">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+</table> </td>=20
+<td width=3D"120" valign=3D"top" style=3D"width: 120px;">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" bgcolor=3D"#000000" class=
+=3D"mob-ps-20">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" align=3D"left" width=3D"100%" style=3D"width: 100%;">=20
+<tbody>
+<tr>=20
+<td width=3D"200" valign=3D"top" bgcolor=3D"#000000" style=3D"width: 200px;=
+">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"right" class=3D"st-dynamic-jvsm9=
+135vmevx" style=3D"padding-top: 20px; padding-bottom: 20px; padding-left: 5=
+0px; width: 100%;"><a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnowlVExag01-vdvNQB7--JGznpU=
+-f4-1qYWiYXL9opX1X2aYPRR4oOoVKL5PId3rRJA8=3D" target=3D"_blank" style=3D"di=
+splay: block;"
+><img border=3D"0" valign=3D"top" width=3D"25" src=3D"https://www.emailimag=
+ecdnhylz.com/ibja086q4s/en_us/images/66197c745a2c0-1712946292.3693.png" alt=
+=3D"Twitter (X) icon" class=3D"st-mobile-width-constraint" style=3D"border:=
+ 0px; display: block; width: 25px; max-width: 100%;" /> </a></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+<td width=3D"200" valign=3D"top" bgcolor=3D"#000000" style=3D"width: 200px;=
+">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" class=3D"st-dynamic-jvsm=
+9135vmevx" style=3D"padding-top: 20px; padding-bottom: 20px; width: 100%;">=
+<a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnoih4WCFbj52PfQecfdelhvGxCI=
+qHGXVPtQdiVqI8Qfmphum59_xTxSrbJdK6BVifZCc=3D" target=3D"_blank" style=3D"di=
+splay: block;"
+><img border=3D"0" valign=3D"top" width=3D"25" src=3D"https://www.emailimag=
+ecdnhylz.com/ibja086q4s/en_us/images/66197c88c9b5b-1712946312.8262.png" alt=
+=3D"Facebook icon" class=3D"st-mobile-width-constraint" style=3D"border: 0p=
+x; display: block; width: 25px; max-width: 100%;" /> </a></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+<td width=3D"200" valign=3D"top" bgcolor=3D"#000000" style=3D"width: 200px;=
+">=20
+<table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left" class=3D"st-dynamic-jvsm91=
+35vmevx" style=3D"padding-top: 20px; padding-bottom: 20px; width: 100%;"><a=
+ href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnosDFJfX22Z35fgL0BVI7gggVbJ=
+VVeUrPoPNZsWtQ3so6bmLTLbgeee6_t5wbd8h4d-k=3D" target=3D"_blank" style=3D"di=
+splay: block;"
+><img border=3D"0" valign=3D"top" width=3D"25" src=3D"https://www.emailimag=
+ecdnhylz.com/ibja086q4s/en_us/images/66197c94b677c-1712946324.7474.png" alt=
+=3D"LinkedIn icon" class=3D"st-mobile-width-constraint" style=3D"border: 0p=
+x; display: block; width: 25px; max-width: 100%;" /> </a></td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"left">=20
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" width=3D"600" class=3D"st-mso-full-width st-mobile-full-width" style=3D"=
+width: 600px;">=20
+<tbody>
+<tr>=20
+<td align=3D"center" valign=3D"top" width=3D"600">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation">=20
+<tbody>
+<tr>=20
+<td width=3D"100%" valign=3D"top" align=3D"center" style=3D"padding-top: 20=
+px; padding-bottom: 20px; width: 100%;">=20
+<div class=3D"mktoSnippet" id=3D"IDHere" style=3D"min-height:20px;">
+<div style=3D"text-align: center;"><span style=3D"font-size: 10px; color: #=
+ffffff;"><a href=3D
+"https://i.tricentis.com/dc/hjgROoWZrfnrqTp6yN0GLeXlYGcuGL9vmAqNtwm7R8fDR5F=
+7OZlFEJ6-AZ_E38pEJ5VlxEN3peeECAlell-kFA=3D=3D/MDcwLVBZVC01NzAAAAGeMfRnohXeA=
+DJpSDeBR7faOETi_Lm_S15X-ise3q090uZt2YgWs1-qyfnxas-avjtgczaw1ak=3D" target=
+=3D"_blank" style=3D"color: #ffffff;"
+>Manage Preferences</a> | <a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnotfXRLeP3PckSNLZ8e-PbeE8Sl=
+YB2cil-444CiZoZnONwdRNtfrFiAnR26lmigq7mls=3D" target=3D"_blank" style=3D"co=
+lor: #ffffff;"
+>Privacy Policy</a> | <a href=3D
+"https://i.tricentis.com/dc/hjgROoWZrfnrqTp6yN0GLeXlYGcuGL9vmAqNtwm7R8fDR5F=
+7OZlFEJ6-AZ_E38pEJ5VlxEN3peeECAlell-kFA=3D=3D/MDcwLVBZVC01NzAAAAGeMfRnohXeA=
+DJpSDeBR7faOETi_Lm_S15X-ise3q090uZt2YgWs1-qyfnxas-avjtgczaw1ak=3D" target=
+=3D"_blank" style=3D"color: #ffffff;"
+>Unsubscribe me </a></span></div>
+<div style=3D"text-align: center;"><span style=3D"font-size: 10px; color: #=
+ffffff;">TRICENTIS USA Corp., 5301 Southwest Pkwy Suite 200, Austin, TX 787=
+35, USA</span></div>
+<div style=3D"text-align: center;"><span style=3D"font-size: 10px; color: #=
+ffffff;">&copy; 2025 Tricentis. All rights reserved.</span></div>
+</div> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>
+<!--[if false]><!-->=20
+<tr>=20
+<td class=3D"st-gmail-fix" style=3D"background-color: #000000;font-size:0; =
+line-height: 0; height: 0; min-width: 600px;"> &nbsp; </td>=20
+</tr>
+<!--<![endif]-->=20
+</tbody>
+</table>  =20
+<a href=3D
+"https://i.tricentis.com/MDcwLVBZVC01NzAAAAGeMfRnoubADC5T12z_0bvom_pdD0oKC_=
+EVvvKJvZmIIxPVdLGd49yAngyZE3EwaEqkOePDRpw=3D"
+></a>
+<img src=3D"https://i.tricentis.com/trk?t=3D1&mid=3DMDcwLVBZVC01NzAAAAGeMfR=
+no87525j-zTrpqb8XvTWs1N3I_YKV7rXmOkTl_08UcC-J6txiQpIZN8nNXavClYlKqWmd1tderc=
+kBAami7DzLsp-uQ9u1n0hdit9TVdL5-_7x2rubQ4GDZM_rgrPJ7cOgKHnsWm5DTLyv4zTAmN2Lg=
+C83SpB9MmVrXoDaUw" width=3D"1" height=3D"1" style=3D"display:none !importan=
+t;" alt=3D"" />
+
+<p><font face=3D"Verdana" size=3D"1">This email was sent to krutibenhareshb=
+hai.bathani@sjsu.edu. If you no longer wish to receive these emails you may=
+ <a href=3D
+"https://i.tricentis.com/u/MDcwLVBZVC01NzAAAAGeMfRnoqQP_kOj6SZn3lKDi0124Iwg=
+nVtyfg-VoZoUwNplkGn5q1vq3RcNapVmfu-Up9N3uCY=3D"
+>unsubscribe</a> at any time. </font> </p>
+</body>
+</html>
+------=_Part_139825209_1209555872.1763402561448--

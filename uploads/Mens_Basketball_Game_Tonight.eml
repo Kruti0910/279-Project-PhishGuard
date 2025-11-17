@@ -1,0 +1,378 @@
+Delivered-To: krutibenhareshbhai.bathani@sjsu.edu
+Received: by 2002:a05:6a10:6c7:b0:678:b2a8:8b7a with SMTP id c7csp1493335pxv;
+        Mon, 17 Nov 2025 11:31:54 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IF+kJOy/om0TRgvENY2ihJaVsmq9cGwJz5SOyP955hdzSVh+BsqiBQeZva5nyWoo1HKHYpp
+X-Received: by 2002:a05:622a:1108:b0:4ee:22d6:1cff with SMTP id d75a77b69052e-4ee22d62f10mr47471461cf.36.1763407913432;
+        Mon, 17 Nov 2025 11:31:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763407913; cv=none;
+        d=google.com; s=arc-20240605;
+        b=B2IxWCRaVkCzEDJyYilvVIyr2LIdHmLldK/8JvUUH69eyzLqWztweSwM6Q7Jgazoru
+         p6SZlaD21/OPo5awqwbDnuWZcx2Fqpinr5EuZLD8GdjFMQKdpxYG01u5tr+4A7kWACSs
+         tIjXh4Cu2ABTs2FI2JPo7tvOe1AedGOiE7yLR4LB1lLxjfaGRdRXBKzOdif2B5TrPU2L
+         NcgfDK4m5O3hOTHD2INP+FBaggimLeEPPUl0f9RedhlHHQrQHSImECF0rZ4zzrQCfxqA
+         qIXGQNAPsx8t21TQLDcAeAQqRCtDMrVVrCcBnSs2F4t5oRMHek54yuddf5BDhfXNGM32
+         6Btg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:subject:to:reply-to:from:list-unsubscribe-post
+         :list-unsubscribe:feedback-id:message-id:dkim-signature
+         :dkim-signature:dkim-signature:dkim-signature;
+        bh=O/eCLygoSZp2hFasDOeyGJES+mUvGd7EZIB63ASFEUk=;
+        fh=P5bZxWm3SWqb6HCpkmMBO3zqtV7HmANSekyDBUZLWis=;
+        b=eKN9qiBbmSduwL1nB/9NwCZG7G8S2LdzdYhuel01LsY7gNPqAp6CaA+ujz/OWGDxf2
+         8jOf3sOE2ccr6KUruO9HnpXSMceSh+iQxJsBh6oZsF7rt6EOlVoB/cIjN7jaHUFjQwbr
+         h/2f5n259D2RDPYDgSWAM/iWLqZcIxIKM9dO7SPIP/Ae8vw+ZoxZ479cJRtOVoOXZJnG
+         /JUeyswipqz5Xk68OUjSJio6W7QEQG94kKby4woMgyBq+Xf89XqkiW061qSGkgw/cFu6
+         wTSAZFtZ2kNIT7oe00kbnylSp/15LkDvAG28OI8ZSu7vRMr+6WdLHnstUM0pVVQWL4uc
+         bdDw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@go.sjsuspartans.com header.s=dk2016 header.b=DB5ZlvQ7;
+       dkim=pass header.i=@us.en25.com header.s=iadusprodelq header.b="oA/ozFQf";
+       dkim=pass header.i=@go.sjsuspartans.com header.s=dk2016 header.b=DB5ZlvQ7;
+       dkim=pass header.i=@us.en25.com header.s=iadusprodelq header.b="oA/ozFQf";
+       spf=pass (google.com: domain of noreply@go.sjsuspartans.com designates 129.145.18.88 as permitted sender) smtp.mailfrom=noreply@go.sjsuspartans.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=go.sjsuspartans.com
+Return-Path: <noreply@go.sjsuspartans.com>
+Received: from mail01.go.sjsuspartans.com (mail01.go.sjsuspartans.com. [129.145.18.88])
+        by mx.google.com with ESMTPS id d75a77b69052e-4ede8858046si46962961cf.557.2025.11.17.11.31.53
+        for <krutibenhareshbhai.bathani@sjsu.edu>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 17 Nov 2025 11:31:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@go.sjsuspartans.com designates 129.145.18.88 as permitted sender) client-ip=129.145.18.88;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@go.sjsuspartans.com header.s=dk2016 header.b=DB5ZlvQ7;
+       dkim=pass header.i=@us.en25.com header.s=iadusprodelq header.b="oA/ozFQf";
+       dkim=pass header.i=@go.sjsuspartans.com header.s=dk2016 header.b=DB5ZlvQ7;
+       dkim=pass header.i=@us.en25.com header.s=iadusprodelq header.b="oA/ozFQf";
+       spf=pass (google.com: domain of noreply@go.sjsuspartans.com designates 129.145.18.88 as permitted sender) smtp.mailfrom=noreply@go.sjsuspartans.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=go.sjsuspartans.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk2016; d=go.sjsuspartans.com;
+ h=Message-ID:List-Unsubscribe:List-Unsubscribe-Post:From:Reply-To:To:Subject:
+ Date:MIME-Version:Content-Type; i=updates@go.sjsuspartans.com;
+ bh=O/eCLygoSZp2hFasDOeyGJES+mUvGd7EZIB63ASFEUk=;
+ b=DB5ZlvQ73oUKpT961oYMKjhmoIPvpLbz+EY2crhAat2TFDixOcTlwuIVn2GQYFhB1+pgj3pRVaHz
+   sYRE3v8yyBziy8liNRAvmoUtP8Mv+n22JXNQZ0nIxOV17yc8cljobXD4JU6IsDs94tHYE7QSBoPv
+   mZTLfY4E0IKA9n7YMIA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=iadusprodelq; d=us.en25.com;
+ h=Message-ID:List-Unsubscribe:List-Unsubscribe-Post:From:Reply-To:To:Subject:
+ Date:MIME-Version:Content-Type;
+ bh=O/eCLygoSZp2hFasDOeyGJES+mUvGd7EZIB63ASFEUk=;
+ b=oA/ozFQf3ooBdOGuhhEdxW/QEyTSuM+scFIbYvoBkj2mw7SsLDWumdByQXxRsWxtzb1zY/Bsar4U
+   I/UAHrzaVWN3H19zo2GB02J4QQ4BQAx8ePfaktHW24zbicPMcyAG4/xR6CX2V18ymgjrf7PRCET4
+   YgsI10/4P3//EY9Ig0LrFjyZVFbtOU2BGJXXmvhS5ZS9GH7Or/Ax2LQ4VXjtdRjbUYdZWCbH6lNp
+   3DguGJZX0L5zaa5nm3NMBBnd8T3P6bv456xBhnSdxTuMAK+Em98x0Q8Ged1cUKKUFwatBOsx0U53
+   T3Xj9WKq3jOyaMfhxyp5BDxtm/LwNQ/dzai6yg==
+Received: from e16.dc6.en25.com (10.50.145.123) by mail01.go.sjsuspartans.com id h3ds2i393i4c for <krutibenhareshbhai.bathani@sjsu.edu>; Mon, 17 Nov 2025 14:29:33 -0500 (envelope-from <noreply@go.sjsuspartans.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk2016; d=go.sjsuspartans.com;
+ h=Message-ID:List-Unsubscribe:List-Unsubscribe-Post:From:Reply-To:To:Subject:
+ Date:MIME-Version:Content-Type; i=updates@go.sjsuspartans.com;
+ bh=O/eCLygoSZp2hFasDOeyGJES+mUvGd7EZIB63ASFEUk=;
+ b=DB5ZlvQ73oUKpT961oYMKjhmoIPvpLbz+EY2crhAat2TFDixOcTlwuIVn2GQYFhB1+pgj3pRVaHz
+   sYRE3v8yyBziy8liNRAvmoUtP8Mv+n22JXNQZ0nIxOV17yc8cljobXD4JU6IsDs94tHYE7QSBoPv
+   mZTLfY4E0IKA9n7YMIA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=iadusprodelq; d=us.en25.com;
+ h=Message-ID:List-Unsubscribe:List-Unsubscribe-Post:From:Reply-To:To:Subject:
+ Date:MIME-Version:Content-Type;
+ bh=O/eCLygoSZp2hFasDOeyGJES+mUvGd7EZIB63ASFEUk=;
+ b=oA/ozFQf3ooBdOGuhhEdxW/QEyTSuM+scFIbYvoBkj2mw7SsLDWumdByQXxRsWxtzb1zY/Bsar4U
+   I/UAHrzaVWN3H19zo2GB02J4QQ4BQAx8ePfaktHW24zbicPMcyAG4/xR6CX2V18ymgjrf7PRCET4
+   YgsI10/4P3//EY9Ig0LrFjyZVFbtOU2BGJXXmvhS5ZS9GH7Or/Ax2LQ4VXjtdRjbUYdZWCbH6lNp
+   3DguGJZX0L5zaa5nm3NMBBnd8T3P6bv456xBhnSdxTuMAK+Em98x0Q8Ged1cUKKUFwatBOsx0U53
+   T3Xj9WKq3jOyaMfhxyp5BDxtm/LwNQ/dzai6yg==
+Received: from c03snj302 (10.50.136.32) by e16.dc6.en25.com id h3drpq393i4o for <krutibenhareshbhai.bathani@sjsu.edu>; Mon, 17 Nov 2025 14:29:33 -0500 (envelope-from <noreply@go.sjsuspartans.com>)
+Message-ID: <6046d9e3405e4ea28f052b53e46e9cce@873312>
+X-Binding: 873312
+X-elqSiteID: 873312
+X-elqPod: 0x21D08863C745073163D34BE0C79B139AC486138E417EA2383AC1764C08224397
+X-cid: 472-574
+Feedback-ID: 472:873312:elqoracle
+List-Unsubscribe: =?utf-8?q?=3Cmailto=3Aspamproc-p03=40us=2Efbl=2Een25=2Ecom=3Fsubject=3DListUnsub=5F873312?=
+ =?utf-8?q?=5F6046d9e3405e4ea28f052b53e46e9cce=3E=2C?=
+ =?utf-8?q?_=3Chttps=3A=2F=2Fclk=2Esjsuspartans=2Ecom=2Fe=2Fu=3Fs=3D873312&elq=3D6046d9e3405e4e?=
+ =?utf-8?q?a28f052b53e46e9cce&t=3D18=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+From: San Jose State Basketball <updates@go.sjsuspartans.com>
+Reply-To: One Spartan Nation <spartantickets@sjsu.edu>
+To: krutibenhareshbhai.bathani@sjsu.edu
+Subject: Men's Basketball Game Tonight!
+Date: Mon, 17 Nov 2025 14:29:33 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-VAW+2xdw7orPsIGSmyaDBg=="
+
+--=-VAW+2xdw7orPsIGSmyaDBg==
+Content-Type: text/plain; charset=utf-8
+Content-Id: <22aa824a-1cce-49f3-a9b6-c4833d3c09ee>
+Content-Transfer-Encoding: 7bit
+
+If you are having trouble reading this email, read the online version <https://s873312.t.en25.com/e/es?s=873312&e=9157&elqTrackId=efd74c1a1b7a40299e524d6e5aa03bea&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqak=8AF5BD68FAC02752809BFE4DDD08B96963E2BEFB5250EDD8D0BB075F4961601AE4A5>
+
+
+IT'S OPENING NIGHT! 
+
+Your Spartan Men's Basketball Team is at home tonight for the first time in 2025-26 as they battle Bethesda. Game time is set for 7:00 PM in the Provident Credit Union Event Center and admission is FREE for all SJSU students with a Tower ID.
+
+PLUS, students can score a FREE men's basketball poster while supplies last! Be sure to stick around after the game for an autograph session with the team! 
+
+
+
+"Email Header"             
+
+"Twitter" <https://twitter.com/SJSUAthletics?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&elqTrackId=81f7ce2ed61c498091bdaf77a2f2f373&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF568CD587C9C1A7302787CE3A997876725BEFB5250EDD8D0BB075F4961601AE4A5>                                         "Instagram" <https://www.instagram.com/sjsuspartans/?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&elqTrackId=5d167a1ba5534d25936d1fb6275f4dd7&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF5977DECDF6700757B85A618D358812AC7BEFB5250EDD8D0BB075F4961601AE4A5>
+                                         "Facebook" <https://www.facebook.com/SJSUSpartans/?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&elqTrackId=f06f40d5c8784a249e5aa1e8bb5168ca&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF59827F6A7781931140902E68D114F8B48BEFB5250EDD8D0BB075F4961601AE4A5>                                     
+
+To manage which communications you would like to receive, or to unsubscribe, please click here <https://app.sjsuspartans.com/preferences?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&utm_medium=email&elq_cid=2&RSRC=Email&RDAT=132&elqTrackId=79dbed8861924feead1320b654bee6c4&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF5D20C415957C046E1846BA30415F4042EBEFB5250EDD8D0BB075F4961601AE4A5>.
+San Jose State Athletics respects your privacy. <https://sidearmsports.com/privacy-policy/?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&utm_medium=email&elq_cid=2&RSRC=Email&RDAT=132&elqTrackId=c9bc118fb06c4575b38e578273ea28aa&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF5ACB5F25925A65E8CA8E0A2A5E473B15DBEFB5250EDD8D0BB075F4961601AE4A5>
+
+Please note that by unsubscribing you are opting out of ALL email communications from San Jose State Athletics.
+
+One Washington Square
+San Jose, CA 95192-0062                                     
+
+
+--=-VAW+2xdw7orPsIGSmyaDBg==
+Content-Type: text/html; charset=utf-8
+Content-Id: <e7e6570b-0f56-492d-8909-f50503dff281>
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--[if !mso]><!-- --><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+<style type="text/css">html,
+ body { min-width:260px; min-height:100%; padding:0; margin:0 auto;}a img { border:none; }.ReadMsgBody { width:100%; }.ExternalClass { width:100%; }.ExternalClass * { line-height:100%; }table, td { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }.button { word-wrap: break-word; }@media screen and (max-width:480px) {@-ms-viewport { width:320px; }@viewport { width:320px; }}ul { padding: 0 !important; Margin: 0 0 0 40px !important; }li { Margin-bottom: 10px !important; }sub, sup { 
+font-size: 70%; line-height: 0; position: relative; } sup { mso-text-raise:60%; vertical-align: super; } sub { bottom: -0.25em; }a{color: #145c9e;}@media screen and (max-width:480px) { .tolkien-column { width: 100% !important; max-width: 100% !important; min-width: auto !important; }.tolkien-column img.full { width: 100% !important; max-width: 100% !important; }.tolkien-column img[shrinktofit=true] { width: auto !important; max-width: 100% !important;}}.hide-in-desktop {  display: none;  max-height: 
+0px;}</style><style id="media-query" type="text/css">@media (max-width: 645px) {.hide-in-mobile {  min-height: 0px;  max-height: 0px;  max-width: 0px;  display: none;  overflow: hidden;  font-size: 0px;}.hide-in-desktop {  display: block !important;  max-height: none !important;}}</style><!--[if (gte mso 9)|(IE)]><style type="text/css">.tolkien-column { width: 100% !important }</style><![endif]--><!--[if gte mso 9]> <style> ul >
+ li { text-indent: -1em; /* Normalise space between bullets and text */ } a { border: none !important; /* Turn off border for anchor tag */ } </style> <![endif]--><style id="asset-specific-css"></style></head><body style="min-width:260px; min-height:100%; padding:0; margin:0 auto; background-color:#d4d6d7;"><!--[if (gte mso 9)|(IE)]><center><table border="0" cellpadding="0" cellspacing="0" align="center" role="presentation"><tr><td width="600"><![endif]-->
+
+<table class="color-wrap" width="100%" cellpadding="0" cellspacing="0" style="background:#d4d6d7;" role="presentation">
+  <tbody>
+    <tr>
+      <td>
+        <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;min-width:300px;margin:0 auto;" role="presentation">
+          <tbody>
+            <tr>
+              <td style="background-color:transparent;line-height:18px;">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                          <tbody>
+                            <tr>
+                              <td style="background-color:transparent;line-height:18px;padding:10px 0px 5px 0px;" class="elq-header-footer-cell cell "><span>
+                                  <div style="text-align: center;"><font face="Arial" size="2">If
+ you are having trouble reading this email, <a data-targettype="sysaction" href="https://clk.sjsuspartans.com/e/es?s=873312&e=9157&elqTrackId=efd74c1a1b7a40299e524d6e5aa03bea&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqak=8AF5BD68FAC02752809BFE4DDD08B96963E2BEFB5250EDD8D0BB075F4961601AE4A5" title="View Online Version">read the online version</a>.</font></div>
+
+<div style="text-align: center;"><br />
+
+<img class="elq-responsive" src="https://img.sjsuspartans.com/EloquaImages/clients/PACsjsu/%7B68d4e159-d5ba-4658-b960-a0854f8e59a1%7D_BASKETBALL_HEADER.png" style="width: 100%; height: auto; max-width:600px" /></div>
+
+                                </span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;min-width:300px;margin:0 auto;" class="row row-0" role="presentation">
+          <tbody>
+            <tr>
+              <td style="background:#ffffff;">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td>
+
+                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                          <tbody>
+                            <tr>
+                              <td style="text-align:left;vertical-align:top;font-size:0px">
+
+                                <table class="tolkien-column tolkien-column-12 col col-0" cellpadding="0" cellspacing="0" style="vertical-align:top;display:inline-table;background:transparent;table-layout:fixed;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#000000;max-width:100%;width:100%;width:-webkit-calc(230400px - 48000%);width:calc(230400px - 48000%);min-width:480px;min-width:-webkit-calc(100%);min-width:calc(100%);" role="presentation">
+                                  <tbody>
+
+                                    <tr>
+                                      <td class="elq-image-cell  cell cell-0" style="background-color:transparent;line-height:0;padding:0px 0px 0px 0px;text-align:center;">
+                                        <!--[if mso]><table width="100%" style="width:100%;height:auto;max-width:600px" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
+
+                                        <img src="https://img.sjsuspartans.com/EloquaImages/clients/PACsjsu/%7B5fd8aaa1-9281-4e84-bda9-674a20e661ce%7D_OPENINGNIGHT_16x9.jpg" height="389" width="600" style="width:100%;height:auto;max-width:2550px;" />
+                                        <!--[if mso]></td></tr></table><![endif]-->
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;min-width:300px;margin:0 auto;" class="row row-1" role="presentation">
+          <tbody>
+
+            <tr>
+              <td style="background:#ffffff;">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                          <tbody>
+                            <tr>
+                              <td style="text-align:left;vertical-align:top;font-size:0px">
+
+                                <table class="tolkien-column tolkien-column-12 col col-0" cellpadding="0" cellspacing="0" style="vertical-align:top;display:inline-table;background:transparent;table-layout:fixed;font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#000000;max-width:100%;width:100%;width:-webkit-calc(230400px - 48000%);width:calc(230400px - 48000%);min-width:480px;min-width:-webkit-calc(100%);min-width:calc(100%);" role="presentation">
+                                  <tbody>
+
+                                    <tr>
+                                      <td style="background-color:transparent;line-height:18px;padding:10px 10px 10px 10px;" class="elq-text-cell cell cell-0">
+                                        <div style="display:inline-block;width:100%;">
+                                          <div><strong style="font-size: 14px;">IT'S OPENING NIGHT!&nbsp;</strong></div>
+                                          <div><br></div>
+
+                                          <div><br></div>
+                                          <div><span style="font-size: 14px;">Your Spartan Men's Basketball Team is at home tonight for the first time in 2025-26 as they battle Bethesda. Game time is set for </span><strong style="font-size: 14px;">7:00 PM</strong><span style="font-size: 14px;"> in the Provident Credit Union Event Center and admission is </span><strong style="font-size: 14px;">FREE</strong><span style="font-size: 14px;">
+ for all SJSU students with a Tower ID.</span></div>
+                                          <div><br></div>
+                                          <div><br></div>
+                                          <div><strong style="font-size: 14px;">PLUS</strong><span style="font-size: 14px;">, students can score a </span><strong style="font-size: 14px;">FREE</strong><span style="font-size: 14px;">
+ men's basketball poster while supplies last! Be sure to stick around&nbsp;after the&nbsp;game for an autograph&nbsp;session with the team!&nbsp;</span></div>
+                                          <div><br></div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;min-width:300px;margin:0 auto;" role="presentation">
+          <tbody>
+            <tr>
+
+              <td style="background-color:transparent;line-height:18px;">
+                <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                          <tbody>
+                            <tr>
+
+                              <td style="background-color:transparent;line-height:18px;padding:10px 10px 10px 0px;" class="elq-header-footer-cell cell "><span>
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="WIDTH: 600px; BORDER-COLLAPSE: collapse; BORDER-SPACING: 0; mso-table-lspace: 0; mso-table-rspace: 0">
+	<tbody>
+		<tr>
+			<td class="deviceWidth" style="WIDTH: 100%; max-width: 600px;" valign="top">
+<img alt="Email Header" src="https://img.sjsuspartans.com/EloquaImages/clients/PACsjsu/%7Ba17f6e98-98c5-4803-8302-50c8156b4cfd%7D_NewOSNUFooter-2023-1.png" style=" display:block;" /></td>
+		</tr>
+		<tr><!-- NAVIGATION HERE -->
+			<td>
+			<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="WIDTH: 100%;">
+				<tbody>
+					<tr>
+						<td align="center" style="">
+						<table align="center" cellpadding="0" cellspacing="0" style="">
+							
+<tbody>
+								<tr>
+									<td style="BORDER-COLLAPSE: collapse; mso-table-lspace: 0; mso-table-rspace: 0" valign="top" width="33%">
+<a data-targettype="webpage" href="https://twitter.com/SJSUAthletics?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&elqTrackId=81f7ce2ed61c498091bdaf77a2f2f373&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF568CD587C9C1A7302787CE3A997876725BEFB5250EDD8D0BB075F4961601AE4A5" target="_blank">
+<img alt="Twitter" border="0" src="https://img.sjsuspartans.com/EloquaImages/clients/PACsjsu/%7B0b09b6d2-d7f5-44d5-9dee-c48f788e4bb0%7D_OSNUFooter-2023-2-TW.png" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; DISPLAY: block; -MS-INTERPOLATION-MODE: bicubic; BORDER-TOP-WIDTH: 0px" /></a></td>
+									<td style="BORDER-COLLAPSE: collapse; mso-table-lspace: 0; mso-table-rspace: 0" valign="top" width="30%">
+<a data-targettype="webpage" href="https://www.instagram.com/sjsuspartans/?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&elqTrackId=5d167a1ba5534d25936d1fb6275f4dd7&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF5977DECDF6700757B85A618D358812AC7BEFB5250EDD8D0BB075F4961601AE4A5" target="_blank">
+<img alt="Instagram" border="0" src="https://img.sjsuspartans.com/EloquaImages/clients/PACsjsu/%7Bd9920abf-89fd-4c09-b1d9-ab21cc6f9b5d%7D_OSNUFooter-2023-IG-3.png" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; DISPLAY: block; -MS-INTERPOLATION-MODE: bicubic; BORDER-TOP-WIDTH: 0px" /></a></td>
+									<td style="BORDER-COLLAPSE: collapse; mso-table-lspace: 0; mso-table-rspace: 0" valign="top" width="37%">
+<a href="https://www.facebook.com/SJSUSpartans/?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&elqTrackId=f06f40d5c8784a249e5aa1e8bb5168ca&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF59827F6A7781931140902E68D114F8B48BEFB5250EDD8D0BB075F4961601AE4A5" target="_blank">
+<img alt="Facebook" border="0" src="https://img.sjsuspartans.com/EloquaImages/clients/PACsjsu/%7B79790bc7-deea-45f8-ae8b-9dca967393e5%7D_OSNUFooter-2023-FB-3.png" style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; DISPLAY: block; -MS-INTERPOLATION-MODE: bicubic; BORDER-TOP-WIDTH: 0px" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- End: Navigation -->
+		<tr>
+			
+<td align="center" style="border-top: solid 0px #000000; padding-top: 0px; padding-bottom: 10px; ">
+			<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tbody>
+					<tr>
+						<td align="center" style="" width="">
+						<table align="center" border="0" cellpadding="12" cellspacing="0">
+							<tbody>
+								<tr>
+									
+<td align="center" class="full block-wrap" style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height:16px; font-weight: normal; color:#000000;"><br />
+									To
+ manage which communications you would like to receive, or to unsubscribe, <a data-targetname="Subscription Management Page (app.sjsuspartans.com)" data-targettype="landingpage" 
+href="https://app.sjsuspartans.com/preferences?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&utm_medium=email&elq_cid=2&RSRC=Email&RDAT=132&elqTrackId=79dbed8861924feead1320b654bee6c4&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF5D20C415957C046E1846BA30415F4042EBEFB5250EDD8D0BB075F4961601AE4A5" title="Unsubscribe">please click here</a>.<br />
+									San
+ Jose State Athletics respects your <a data-targettype="webpage" href="https://sidearmsports.com/privacy-policy/?utm_medium=email&elq_cid=271961&RSRC=Email&RDAT=574&ehash=4de56d2daf1fb35985547fdb2117a92dcf49c56b37854782b41cc41f4aea9db2&utm_medium=email&elq_cid=2&RSRC=Email&RDAT=132&elqTrackId=c9bc118fb06c4575b38e578273ea28aa&elq=6046d9e3405e4ea28f052b53e46e9cce&elqaid=574&elqat=1&elqCampaignId=472&elqak=8AF5ACB5F25925A65E8CA8E0A2A5E473B15DBEFB5250EDD8D0BB075F4961601AE4A5"><u>privacy.</u></a><br />
+									
+<br />
+									Please note that by unsubscribing you are opting out of ALL email communications from San Jose State Athletics.<br />
+									<br />
+									One Washington Square<br />
+									San Jose, CA 95192-0062</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+                                </span></td>
+                            </tr>
+                          </tbody>
+
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]></td></tr></table></center><![endif]-->
+
+<img src='https://clk.sjsuspartans.com/e/FooterImages/FooterImage1?elq=6046d9e3405e4ea28f052b53e46e9cce&siteid=873312' alt="" border=0 width=1px height=1px style='display:block;'></body></html>
+--=-VAW+2xdw7orPsIGSmyaDBg==--

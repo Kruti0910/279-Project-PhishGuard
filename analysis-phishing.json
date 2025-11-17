@@ -1,0 +1,4092 @@
+{
+  "metadata": {
+    "analysis_date": "2025-04-22T16:41:56.000213",
+    "total_files": 100,
+    "system_version": "1.0"
+  },
+  "results": [
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: emailconfirm@ebay.com vs Return-Path: user@example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: emailconfirm@ebay.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: eBay account verification!",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 30 Oct 2003 08:52:16 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_2.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 04:04:30 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: asia.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_90.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: confirm@ncua.gov vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: IMPORTANT: FCU Verification",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 14 Aug 2005 18:28:49 +0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: yahoo.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_84.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw23-confirm@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 25 Jul 2005 00:59:07 -0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_53.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: security@ebay.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Unauthorized transactions on your account",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Unauthorized transactions on your account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 22 Jul 2005 06:19:32 +0800",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: hyps.mysch.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_47.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Online Banking and Bill Pay Deactivation Notice",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 21 Jul 2005 19:22:10 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_46.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@eBay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@eBay.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your eBay Account Has Been Suspended !!!",
+          "weight": 15
+        },
+        {
+          "rule": "subject_excessive_punctuation",
+          "name": "Subject contains excessive punctuation",
+          "description": "Subject: Your eBay Account Has Been Suspended !!!",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 24 Jul 2005 08:35:54 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: eggis.homeip.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_52.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 80,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@wellsfargo.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: security@wellsfargo.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 15 Aug 2005 23:57:13 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: franz.inode.at",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_85.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 05:16:42 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: asia.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_91.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: emailconfirm@ebay.com vs Return-Path: user@example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: eBay account verification!",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 31 Jan 2003 09:14:21 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_3.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: IMPORTANT ACCOUNT NOTICE FROM SOUTHTRUST BANK [Thu, 16 Jun 2005 12:20:57 -0600]",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: IMPORTANT ACCOUNT NOTICE FROM SOUTHTRUST BANK [Thu, 16 Jun 2005 12:20:57 -0600]",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: IMPORTANT ACCOUNT NOTICE FROM SOUTHTRUST BANK [Thu, 16 Jun 2005 12:20:57 -0600]",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 16 Jun 2005 21:19:57 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_1.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@deutsche-bank.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Deutsche Bank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 15 Aug 2005 17:01:22 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_87.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 06:29:57 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: europe.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_93.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@intl.paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@intl.paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: intl.paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Update your account information",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 11 Aug 2005 18:53:08 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: arribada.paypal.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_78.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notice of account limitation",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 21 Jul 2005 18:18:30 +0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_44.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Please Upgrade Your Account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 23 Jul 2005 16:38:40 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_50.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: security@bankofthewest.com vs Reply-To: service@bankofthewest.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 23 Jul 2005 15:57:37 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: charter.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_51.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Email Account Suspension",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 21 Jul 2005 18:29:56 +0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_45.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: customercare@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: BANK OF THE WEST NOTICE",
+          "weight": 15
+        },
+        {
+          "rule": "subject_all_caps",
+          "name": "Subject is in all capital letters",
+          "description": "Subject: BANK OF THE WEST NOTICE",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 12 Aug 2005 02:14:52 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: pasmtp.tele.dk",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_79.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 05:59:48 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: asia.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_92.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@deutsche-bank.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Deutsche Bank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 15 Aug 2005 17:00:47 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_86.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support@keybank.com vs Return-Path: user@example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: KeyBank Customer Confirm Your Identity",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 18 Mar 2005 12:14:46 +0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: server973.lollo.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_4.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: accounts@paypal.com vs Reply-To: fugi_acum_1@4x.ro",
+          "weight": 25
+        },
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To domains don't match",
+          "description": "From domain: paypal.com vs Reply-To domain: 4x.ro",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: accounts@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 14 Aug 2005 12:55:59 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_82.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 08:24:46 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: nea.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_96.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: ned@southtrust.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: SouthTrust Bank Checking Card",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 20 Jul 2005 11:34:41 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_41.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: administration@ncua.gov vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: administration@ncua.gov",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Update And Verify Your FCU Account ",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 24 Jul 2005 09:05:06 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: humerus.ctrl.ucla.edu",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_55.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 80,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: user@isp.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: aw-confirm@eBay.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 06 Aug 2005 19:28:10 -0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: plesk.ecure.nl",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_69.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your PayPal Account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 02 Aug 2005 22:45:56 -0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: aol.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_68.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Please Update Your Account Access ",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 24 Jul 2005 03:50:27 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: clust07-www04.powweb.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_54.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw23-confirm@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 20 Jul 2005 22:14:48 -0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_40.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 09:24:11 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: nea.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_97.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: support@ncua.gov vs Reply-To: No.Reply@ncua.gov",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support@ncua.gov vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: support@ncua.gov",
+          "weight": 10
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: National Credit Union Administration",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 14 Aug 2005 18:04:44 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_83.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support@keybank.com vs Return-Path: user@example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: KeyBank Customer Confirm Your Identity",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 18 Mar 2005 12:14:46 +0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: server973.lollo.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_5.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: service@paypal.com vs Reply-To: accounting@paypal.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Verify your PayPal Account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 29 Jun 2005 19:10:28 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_7.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 07:17:35 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: europe.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_95.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: accounts@paypal.com vs Reply-To: fugi_acum_1@4x.ro",
+          "weight": 25
+        },
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To domains don't match",
+          "description": "From domain: paypal.com vs Reply-To domain: 4x.ro",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: accounts@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 14 Aug 2005 12:41:59 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_81.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 70,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: accounts@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 24 Jul 2005 22:49:07 -0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: hotmail.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_56.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 70,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support_id_01723@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 21 Jul 2005 11:40:27 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_42.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your Account is Suspended For Security Reasons",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 21 Jul 2005 16:34:25 +0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_43.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 70,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: info@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 24 Jul 2005 23:08:26 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: alpha.whbdns.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_57.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw-confirm@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: aw-confirm@ebay.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: ***Urgent Safeharbor Department Notice***",
+          "weight": 15
+        },
+        {
+          "rule": "subject_excessive_punctuation",
+          "name": "Subject contains excessive punctuation",
+          "description": "Subject: ***Urgent Safeharbor Department Notice***",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 12 Aug 2005 07:50:21 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_80.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 06:37:07 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: africa.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_94.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: acc-validity@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Account compromised: billing information moved or changed.",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 28 Jun 2005 12:05:18 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: dedicated.choopa.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_6.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw-alert@eBay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Security Center (action required)",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Security Center (action required)",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 01 Jul 2005 09:57:20 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: hummer.mediajuice.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_18.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: custsupport@firstusa.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Confirm your Online Banking records",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 09 Jul 2005 19:32:50 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_30.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your PayPal Account Could Be Suspended",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 07 Jul 2005 04:48:04 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "suspicious_ips",
+          "name": "Suspicious IP addresses in mail routing",
+          "description": "Suspicious IPs: 127.0.0.1",
+          "weight": 20
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: server1.webflashweb.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_24.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your PayPal Account Could Be Suspended",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 07 Jul 2005 11:51:19 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "suspicious_ips",
+          "name": "Suspicious IP addresses in mail routing",
+          "description": "Suspicious IPs: 127.0.0.1",
+          "weight": 20
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: server1.webflashweb.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_25.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Update Your Account Information",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 12 Jun 2005 14:54:10 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: charter.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_31.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: confirm@ncua.gov vs Reply-To: support@ncua.gov",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: confirm@ncua.gov vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: acc-activate@ncua.gov",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: FCU NOTICE: Important security renewal",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: FCU NOTICE: Important security renewal",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 02 Jul 2005 20:34:48 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: verizon.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_19.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: unlock@lasallebank.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: lasallebank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Important NOTICE",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 07 Jul 2005 19:36:51 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_27.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: confirm@bankofthewest.com vs Reply-To: service@bankofthewest.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: confirm@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Security Update",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 13 Jun 2005 09:52:58 +0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: hotmail.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_33.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 14 Jul 2005 15:18:15 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_32.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support@postbank.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Warnung der Banksicherheitsdienst hinsichtlich der Internet - Misstaeter",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 07 Jul 2005 13:03:26 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: pool-71-110-105-219.lsanca.dsl-w.verizon.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_26.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: unlock@lasallebank.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: lasallebank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Unlock your ACCOUNT",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 03 Jul 2005 12:33:33 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_22.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: accounts@chevychase.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: chevychase.com",
+          "weight": 10
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Chevy Chase Bank: Unusual activity in your account !",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Chevy Chase Bank: Unusual activity in your account !",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 16 Jul 2005 23:31:48 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: ns.cwplus.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_36.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of Limited Account Access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 14 Jul 2005 12:10:25 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: saturn.yourhostserver.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_37.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: bank@bankofthewest.com vs Reply-To: exxtrem2005@yahoo.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To domains don't match",
+          "description": "From domain: bankofthewest.com vs Reply-To domain: yahoo.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: bank@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 03 Jul 2005 16:34:10 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: raq4c.projecta.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_23.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw-confirm36@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 16 Jul 2005 02:13:58 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_35.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: unlock@lasallebank.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: lasallebank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Unlock your ACCOUNT",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 03 Jul 2005 12:33:33 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_21.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: confirm@ncua.gov vs Reply-To: support@ncua.gov",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: confirm@ncua.gov vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: acc-activate@ncua.gov",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: FCU NOTICE: Important security renewal",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: FCU NOTICE: Important security renewal",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 02 Jul 2005 20:34:48 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: verizon.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_20.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw-confirm36@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 15 Jul 2005 12:31:43 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_34.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 13:46:33 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: nea.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_100.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Update Your Account Records",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 21 Jul 2005 12:40:52 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_39.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw45-confirm@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: eBay - verify your account information",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 01 Jul 2005 17:57:54 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_11.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 80,
+      "indicators": [
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: OFFICIAL INFORMATION FOR CLIENT OF SOUTHTRUST BANK",
+          "weight": 15
+        },
+        {
+          "rule": "subject_all_caps",
+          "name": "Subject is in all capital letters",
+          "description": "Subject: OFFICIAL INFORMATION FOR CLIENT OF SOUTHTRUST BANK",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 30 Jun 2005 16:31:57 -0400",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_10.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support_num_83@lasallebank.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: lasallebank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: LaSalle Bank: urgent security notification for clients",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: LaSalle Bank: urgent security notification for clients",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: LaSalle Bank: urgent security notification for clients",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 16 Jul 2005 17:28:56 -0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_38.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: accounts@lasallebank.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: lasallebank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: lasallebank.com",
+          "weight": 10
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: - Notification about your Lasalle online account -",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 03 Jul 2005 08:18:09 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_12.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Your PayPal Billing Information records are out of date. Please update them immediately to restore your account.",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your PayPal Billing Information records are out of date. Please update them immediately to restore your account.",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 05 Jul 2005 05:39:04 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: baracus.dreamhost.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_13.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: aw-confirm@eBay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: support@eBay.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Private message from eBay accounts management.",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 01 Jul 2005 05:02:30 +0800",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: looking-glass.singtel.com.hk",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_17.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support_ref_91388479@southtrust.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Attention SouthTrust Bank client [Thu, 30 Jun 2005 13:40:11 -0700]",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Attention SouthTrust Bank client [Thu, 30 Jun 2005 13:40:11 -0700]",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 30 Jun 2005 15:40:11 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_16.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 05 Jul 2005 22:18:50 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_14.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 80,
+      "indicators": [
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: SouthTrust Bank: Important Fraud AIert",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: SouthTrust Bank: Important Fraud AIert",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 07 Jul 2005 21:01:09 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_28.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: custservice_ref_243818@southtrust.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: CUSTOMER NOTICE: YOUR ACCOUNT IN SOUTHTRUST BANK [Thu, 07 Jul 2005 22:00:59 -0400]",
+          "weight": 15
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: CUSTOMER NOTICE: YOUR ACCOUNT IN SOUTHTRUST BANK [Thu, 07 Jul 2005 22:00:59 -0400]",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 07 Jul 2005 21:03:59 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_29.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: verify@ncua.gov vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Account activity verification.",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 06 Jul 2005 19:21:14 +0300",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_15.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 11:13:18 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: europe.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_99.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: fraudprotection@visa.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: *** URGENT *** Please Read",
+          "weight": 15
+        },
+        {
+          "rule": "subject_excessive_punctuation",
+          "name": "Subject contains excessive punctuation",
+          "description": "Subject: *** URGENT *** Please Read",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 09 Aug 2005 05:26:36 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_72.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: security@ebay.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Unauthorized transactions on your account",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Unauthorized transactions on your account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 29 Jul 2005 03:15:38 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: linux.local",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_66.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Account Suspension Notice - Limited Use",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 01 Aug 2005 13:30:08 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: matrix.pilotservers.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_67.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: identdep_op9448546739339@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: Private Urgent Message From eBay",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Aug 2005 09:41:09 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_73.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 09:50:49 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: asia.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_98.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of Limited Account Access (Routing Code: PP-091-233-629)",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 28 Jun 2005 16:03:49 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: saturn.yourhostserver.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_8.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: service@paypal.com vs Reply-To: accounting@paypal.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "undisclosed_recipients",
+          "name": "Email sent to undisclosed recipients",
+          "description": "The To field contains 'undisclosed recipients'",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Verify your PayPal Account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Aug 2005 06:27:22 +0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_59.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: meine_bank@deutschebanc.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: deutschebanc.de",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Online Bank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 01 Feb 2003 08:16:02 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_65.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 95,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: paypal@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: paypal@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Update Your Paypal Account",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 08 Aug 2005 22:30:00 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: pluto.conawaybrown.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_71.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Please Restore Your Account Access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 07 Aug 2005 02:26:16 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: franz.inode.at",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_70.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: meine_bank@deutschebanc.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: deutschebanc.de",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Online Bank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 01 Feb 2003 08:15:41 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_64.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@email.paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: email.paypal.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: email.paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Unauthorized Account Access: (Routing code: 874365-328987-YUQR)",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 26 Jul 2005 10:13:56 +0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: yahoo.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_58.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: service@paypal.com vs Reply-To: No.Replay@paypal.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: service@paypal.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of Limited Account Access (Routing Code: C840-L001-Q190-T1830) Unauthorized Access:NA (Routing Code: C840-L001-Q-T-S113) ",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 14 Jun 2005 06:43:25 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: krypton.showeb.nl",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_9.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 50,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Aug 2005 00:49:36 -0700",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: mail.example.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_60.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: IMPORTANT:Security Issues  [Incident: 040921]",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: IMPORTANT:Security Issues  [Incident: 040921]",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Aug 2005 11:37:48 +0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: bankofamerica.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_74.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: online@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Your Paypal Account Could Be Suspended",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 23 Jul 2005 18:05:19 +0800",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: naweekly.com.tw",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_48.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: service@bankofthewest.com vs Reply-To: security@bankofthewest.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Update Your Account Information",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 23 Jul 2005 07:39:22 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: yahoo.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_49.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@ebay.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_urgent",
+          "name": "Subject contains urgent language",
+          "description": "Subject: IMPORTANT:Security Issues  [Incident: 040921]",
+          "weight": 15
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: IMPORTANT:Security Issues  [Incident: 040921]",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Aug 2005 11:37:49 +0100",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: bankofamerica.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_75.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "from_reply_to_mismatch",
+          "name": "From and Reply-To addresses don't match",
+          "description": "From: confirm@bankofthewest.com vs Reply-To: support@bankofthewest.com",
+          "weight": 25
+        },
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: confirm@bankofthewest.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Online Banking and Bill Pay Deactivation Notice",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 12 Aug 2005 12:19:18 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: earthlink.net",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_61.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 80,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: security@wellsfargo.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "display_name_contains_email",
+          "name": "Display name contains an email address",
+          "description": "Display name: security@wellsfargo.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 16 Aug 2005 04:00:36 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: franz.inode.at",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_88.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: info@postbank.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Administration der Postbank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 11 Aug 2005 16:56:58 -0500",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_77.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: meine_bank@deutschebanc.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: deutschebanc.de",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Online Bank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 01 Feb 2003 08:12:14 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_63.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: meine_bank@deutschebanc.de vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: deutschebanc.de",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Online Bank",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 01 Feb 2003 08:10:11 -0600",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_62.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: support@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: PayPal Notification ( Your account is suspended )",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Aug 2005 13:36:47 +0200",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_76.eml"
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "from_return_path_mismatch",
+          "name": "From and Return-Path addresses don't match",
+          "description": "From: service@paypal.com vs Return-Path: user@mail.example.com",
+          "weight": 20
+        },
+        {
+          "rule": "subject_account",
+          "name": "Subject contains account-related language",
+          "description": "Subject: Notification of limited account access",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 17 Aug 2005 04:04:30 +0000",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: asia.ibbmonitor.com",
+          "weight": 20
+        }
+      ],
+      "file": "data/phishing/phishing/phishing_sample_89.eml"
+    }
+  ],
+  "statistics": {
+    "phishing_count": 100,
+    "legitimate_count": 0,
+    "error_count": 0
+  }
+}

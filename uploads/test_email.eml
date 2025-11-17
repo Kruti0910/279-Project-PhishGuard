@@ -1,0 +1,277 @@
+Delivered-To: bathanikruti0910@gmail.com
+Received: by 2002:a05:6a20:ed03:20b0:35d:5500:c0f3 with SMTP id o3-n2csp957310pzy;
+        Sun, 16 Nov 2025 09:47:38 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFw231fC7EWRg80Sk/cesaWHrcK0DmL4zUrMAFQA2KZDvngnlsMFB4iWfh8/7JsNWRvIt8K
+X-Received: by 2002:a05:6602:6c19:b0:948:7d9c:88bf with SMTP id ca18e2360f4ac-948e09fae1emr1182013639f.0.1763315258761;
+        Sun, 16 Nov 2025 09:47:38 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763315258; cv=none;
+        d=google.com; s=arc-20240605;
+        b=kGOfVwxW1pwhMO2MVwSgLpDYuThm6suq4XYhnWkp4i23/fZ+eubz7mpzKwPwWSVTuG
+         bByWXSbD6uXfDEWKiCIPGPmVcoKubFeqYQFzxD69j/TXbnEixWIO8vamKCAnP//WBDjb
+         JNeswyrdLoV3++/aZg4uwwVbSxBZv4RIc4kF9yYSAxpBXaRENzZU0f0HA4p7c/mW81K8
+         XTXW/+jWVArQwHbfoxLzrujtKyFf98IvELkSRKMbdlWRxnxF4SnmhXNeJ5+ghEdZBH8k
+         x21X8cMiCUUMswxJeYAXiNY3WzptYtqlyxJHJ9tPXA3U37boP88B3rxtr/TxC5HvHC/6
+         7ZOw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-help:date:subject
+         :to:from:dkim-signature;
+        bh=zv6jgQB++qQBQNNit4pXqke/lCbcFOG569Gk03hG3Jk=;
+        fh=tzNM6c2Z/8+lBY03o8awtf3XpAc3lwxtaRLSrPg0Z1w=;
+        b=eTvLc3mZvD96LoCHtW5sFtAkDJqUhEOXZVQvv/Rw+R2CunfqJXkZT8xG8L8btgO61J
+         F4YWD6TkojQC8XQuUzcmhmhjm7ZCTHdxk4joUznUr1SPtiDxO2pYMHmNg7NAAdq4P+HD
+         0qNmKTFXMsnZPPKxd6AgJBZ7pvkzaydgEVvyzASJagyLZyCFIAPtd3FNkD+2cYrFQ8sb
+         8I5LZPvNgqke2FTuZGhShe6OsZMRu9/VHptPRXQpQjxSvtuEN6nGGCUfyZw864idInIx
+         UCHffrxYiedSghG4b4znSIep9VpQcvy7PzatiPvx3L9Jd/zGxvmywIAfsBn+1wmcM6Sv
+         tYzw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=Hgv8vN85;
+       spf=pass (google.com: domain of bounce-3991156_html-408173875-25036080-210534-1@bounce.email.avalonbay.com designates 207.250.68.188 as permitted sender) smtp.mailfrom=bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avalonbay.com
+Return-Path: <bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com>
+Received: from mta.email.avalonbay.com (mta.email.avalonbay.com. [207.250.68.188])
+        by mx.google.com with ESMTPS id ca18e2360f4ac-948fffb61dbsi185354339f.274.2025.11.16.09.47.38
+        for <bathanikruti0910@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 16 Nov 2025 09:47:38 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-3991156_html-408173875-25036080-210534-1@bounce.email.avalonbay.com designates 207.250.68.188 as permitted sender) client-ip=207.250.68.188;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=Hgv8vN85;
+       spf=pass (google.com: domain of bounce-3991156_html-408173875-25036080-210534-1@bounce.email.avalonbay.com designates 207.250.68.188 as permitted sender) smtp.mailfrom=bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=avalonbay.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim1; d=s1.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Help:MIME-Version:Reply-To:Message-ID:Content-Type;
+ bh=zv6jgQB++qQBQNNit4pXqke/lCbcFOG569Gk03hG3Jk=;
+ b=Hgv8vN85RLy4YcuhAcuO4cjxMDtXJ2ZdBUUPdr99IQrn8UABlsBBfpySyCyoXHLkaBgx1kz43lYW
+   qU5AmKlBvDBU3ZH741vQK1/kJo6BSvV6depkGOx9iCIAPZheCZebQI0UTzYzqTud7jXogx/rTyuB
+   89PE087JBSk8ts6YNZDnwg3rZ6g5X91ObwqzGFG78gjyuos1/V22I8sGFll5haVzGDMhtJd0oaS4
+   VGheVeVhr487fmydS5CIsfJOdb5EGV+Kjc2T0T/ky0kWqp+WhGWrPxiEX9uHtVsLdoJOUyY3hBlV
+   CiOtQHKLW5MLl6rrVq51WY+d/fE2AIyAQpGtgQ==
+Received: by mta.email.avalonbay.com id h3873k2fmd4o for <bathanikruti0910@gmail.com>; Sun, 16 Nov 2025 17:47:38 +0000 (envelope-from <bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com>)
+From: "Avalon at Cahill Park" <acahillpark@avalonbay.com>
+To: <bathanikruti0910@gmail.com>
+Subject: Reminder: Notice of Entry
+Date: Sun, 16 Nov 2025 11:47:38 -0600
+List-Help: <http://click.email.avalonbay.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiIyMTA1MzQiLCJzIjoiNDA4MTczODc1IiwibGlkIjoiMzk5MTE1NiIsImoiOiIyNTAzNjA4MCIsImpiIjoiMSIsImQiOiIxMDE5MiJ9._8lp5Ia94QkUadmXZispbsjP8_UVHjw5oh8l3cVikgc>
+MIME-Version: 1.0
+Reply-To: "Avalon at Cahill Park" <acahillpark@avalonbay.com>
+X-SFMC-Stack: 1
+x-job: 210534_25036080
+Message-ID: <bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com>
+X-Return-Path: bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com
+Feedback-ID: 210534:25036080:207.250.68.188:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="i4mIpxNfeqaY=_?:"
+
+This is a multi-part message in MIME format.
+
+--i4mIpxNfeqaY=_?:
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+
+
+
+Dear Residents,
+
+
+Please be advised that on Monday, November 17th, and Tuesday, November 18th, 2025, our Maintenance Team and Cintas Fire Protection will conduct the annual fire alarm and sprinkler inspections throughout the community.
+
+
+Inspections will take place between 9:00 AM &ndash; 5:00 PM, and brief access to apartment homes will be required for a 4&ndash;5-minute visual inspection of sprinkler heads. Audibles will be sounding consistently and intermittently throughout the inspection(s).
+
+Schedule:
+	- Monday, November 17th: Buildings 1, 2, 3, 5 & 6
+	- Tuesday, November 18th: Buildings 4 & 7
+ 
+Reminders:
+	- Pets: Please keep all pets restrained or crated during your scheduled inspection window.
+	- Access: Ensure closets and bathrooms are accessible and free of clutter.
+	- Alarms: Fire alarms will sound intermittently throughout the day during testing.
+ 
+
+These inspections are state required to ensure the continued safety of our community. Thank you for your cooperation and understanding. If you have any questions, please contact the Leasing Office by email or through the Resident App.
+
+
+ 
+
+The Avalon at Cahill Park Team 
+
+Avalon at Cahill Park
+
+754 The Alameda | San Jose, CA 95126
+
+
+Connect with us at (408) 292-7778
+
+
+
+ This email was sent by:AvalonBay Communities, Inc.
+
+ 4040 Wilson Blvd., Suite 1000 Arlington, VA, 22203, United States 
+
+
+
+--i4mIpxNfeqaY=_?:
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+          "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!--Avalon-->
+<head>
+    <style type="text/css">
+
+        table.content {
+            width: 600px;
+        }
+
+        td.header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        td.footer {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+
+
+        @media screen and (max-device-width: 500px), screen and (max-width: 500px) {
+
+            table.content {
+                width: 320px !important;
+            }
+
+            td.header {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            td.footer {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+
+            table[class="hide"], img[class="hide"], td[class="hide"] {
+                display: none !important;
+            }
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title></title>
+</head><body bgcolor="#ffffff">
+
+
+    <img src="http://click.email.avalonbay.com/open.aspx?ffcb10-fe6716757567027d7d14-fdc11572766c0c7e7711757662-fed0167175610779-fe8d17797c65057873-fe2410707d65037e7d1375-ffce15&d=10192&bmt=0" width="1" height="1" alt="">
+        <center>
+            <table class="content" width="600" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" height="15" border="0" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="content" width="100%" bgcolor="#61666c" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="5%" class="header"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" width="5%" border="0" /></td>
+                                <td style="padding-top:20px;padding-bottom:20px;" class="header" align="left"><img class="image-resize" src="http://image.email.avalonbay.com/lib/fed0167175610779/m/3/sf_avb_logo.jpg" border="0" /></td>
+                                <td width="5%" class="header"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" width="5%" border="0" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" height="15" border="0" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <table class="content" width="100%" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="5%" class="header"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" width="5%" border="0" /></td>
+                                <td class="copy" bgcolor="#FFFFFF">
+                                    <p style="font-family:Arial, Helvetica, sans-serif;color:#61666c;text-align:left;">
+                                        <br />
+                                        Dear Residents,<br />
+<br />
+Please be advised that on Monday, November 17th, and Tuesday, November 18th, 2025, our Maintenance Team and Cintas Fire Protection will conduct the annual fire alarm and sprinkler inspections throughout the community.<br />
+<br />
+Inspections will take place between&nbsp;<strong>9:00 AM &ndash; 5:00 PM</strong>, and brief access to apartment homes will be required for a 4&ndash;5-minute visual inspection of sprinkler heads. Audibles will be sounding consistently and intermittently throughout the inspection(s).<br />
+<br />
+<strong><u>Schedule:</u></strong>
+<ul>
+	<li><strong>Monday, November 17th: Buildings 1, 2, 3, 5 &amp; 6</strong></li>
+	<li><strong>Tuesday, November 18th: Buildings 4 &amp; 7</strong></li>
+</ul>
+&nbsp;<br />
+<strong><u>Reminders:</u></strong>
+
+<ul>
+	<li>Pets: Please keep all pets restrained or crated during your scheduled inspection window.</li>
+	<li>Access: Ensure closets and bathrooms are accessible and free of clutter.</li>
+	<li>Alarms: Fire alarms will sound intermittently throughout the day during testing.</li>
+</ul>
+&nbsp;<br />
+These inspections are state required to ensure the continued safety of our community. Thank you for your cooperation and understanding. If you have any questions, please contact the Leasing Office by email or through the Resident App.<br />
+<br />
+&nbsp;<br /><br />The Avalon at Cahill Park Team <br />
+                                    </p>
+
+                                    <p style="font-size:13px;font-family:Arial, Helvetica, sans-serif;color:#61666c;text-align:left;">
+                                        <span style="color:#cd505e;font-size:14px;"><strong>Avalon at Cahill Park</strong></span><br />
+                                        754 The Alameda&nbsp;|&nbsp;San Jose,&nbsp;CA&nbsp;95126<br /><br />
+                                        Connect with us at <strong>(408) 292-7778</strong>
+                                    </p>
+                                </td>
+                                <td width="5%" class="header"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" width="5%" border="0" /></td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#FFFFFF"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" height="15" border="0" /></td>
+                            </tr>
+                            <tr>
+                                <td width="5%" class="footer" bgcolor="#61666c"></td>
+                                <td class="footer" style="padding-top:10px;padding-bottom:10px;" bgcolor="#61666c" align="right"><img class="image-resize" src="http://image.email.avalonbay.com/lib/fed0167175610779/m/3/bm-equal-avalon.jpg" border="0" /></td>
+                                <td width="5%" class="footer" bgcolor="#61666c"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" width="5%" border="0" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="content" width="100%" bgcolor="#e5e0d9" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td bgcolor="#ffffff" colspan="4"><img src="http://image.email.avalonbay.com/lib/fed0167175610779/m/1/spacergif.gif" height="15" border="0" /></td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+
+
+
+            </table>
+        </center>
+
+
+<!--
+X-Return-Path: bounce-3991156_HTML-408173875-25036080-210534-1@bounce.email.avalonbay.com
+-->
+</body>
+	<table align="center">
+		 
+		<tr>
+			 
+			<td style="background-color:#ffffff;color:#ffffff;font-family:verdana, sans-serif;font-size:18px;font-weight:normal;padding-top:12px;text-align:left;"> <font face="verdana" size="1" color="#444444"> This email was sent by:  <b>AvalonBay Communities, Inc.</b> <br>
+			 4040 Wilson Blvd., Suite 1000 Arlington, VA, 22203, United States </td> 
+		</tr>
+		 
+	</table></html>
+
+--i4mIpxNfeqaY=_?:--
+

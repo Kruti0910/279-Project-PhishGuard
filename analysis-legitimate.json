@@ -1,0 +1,3741 @@
+{
+  "metadata": {
+    "analysis_date": "2025-04-22T16:48:03.511310",
+    "total_files": 66,
+    "system_version": "1.0"
+  },
+  "results": [
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: ftenergy.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: ftenergy.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: ftenergy.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 15:48:08 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "ei_editor@ftenergy.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Mon, 29 Oct 2001 15:48:08 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<22534132.1075858645229.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/36."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 1 Jan 2002 17:19:40 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "arsystem@mailman.enron.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Tue, 1 Jan 2002 17:19:40 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<21920205.1075855377891.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/19."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 10 Dec 2001 15:31:51 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 10 Dec 2001 15:31:51 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<10326858.1075855377484.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/3."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 90,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: networkpromotion.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: networkpromotion.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 30 Dec 2001 18:33:29 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "unsubscribe-i@networkpromotion.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Sun, 30 Dec 2001 18:33:29 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<32169781.1075855377639.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/9."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 31 Dec 2001 10:53:43 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 31 Dec 2001 10:53:43 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<7618763.1075855377753.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/13."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 17:22:24 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "arsystem@mailman.enron.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Tue, 27 Nov 2001 17:22:24 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<14859009.1075862166148.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/75."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 15:03:47 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 15:03:47 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<11341209.1075858645204.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/35."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: anchordesk.zdlists.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: anchordesk.zdlists.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: anchordesk.zdlists.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 30 Dec 2001 22:49:42 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "anchordesk_daily@anchordesk.zdlists.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Sun, 30 Dec 2001 22:49:42 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<14955894.1075855377681.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/10."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 26 Nov 2001 08:31:11 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 26 Nov 2001 08:31:11 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<7182251.1075863149647.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/84."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: gte.net",
+          "weight": 10
+        },
+        {
+          "rule": "subject_excessive_punctuation",
+          "name": "Subject contains excessive punctuation",
+          "description": "Subject: Fw: Golfin' and Wedding!!!",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 18:08:10 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "subject": {
+          "value": "Fw: Golfin' and Wedding!!!",
+          "status": "suspicious",
+          "reason": "Contains excessive punctuation"
+        },
+        "date": {
+          "value": "Mon, 29 Oct 2001 18:08:10 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<8268911.1075858645425.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/42."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 25 Oct 2001 13:49:57 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Thu, 25 Oct 2001 13:49:57 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<22278903.1075858644746.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/24."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 08:10:09 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 08:10:09 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<1389428.1075862165961.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/67."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 17:35:18 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "arsystem@mailman.enron.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Mon, 29 Oct 2001 17:35:18 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<1449918.1075858645402.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/41."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: state-bank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: state-bank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_excessive_punctuation",
+          "name": "Subject contains excessive punctuation",
+          "description": "Subject: How do I eat crow and still make it tasty???????",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 26 Nov 2001 16:17:10 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "geninfo@state-bank.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "subject": {
+          "value": "How do I eat crow and still make it tasty???????",
+          "status": "suspicious",
+          "reason": "Contains excessive punctuation"
+        },
+        "date": {
+          "value": "Mon, 26 Nov 2001 16:17:10 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<102930.1075863149717.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/87."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 25 Oct 2001 13:27:50 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Thu, 25 Oct 2001 13:27:50 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<8855273.1075858644821.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/27."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: state-bank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: state-bank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Internet Banking",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 20 Nov 2001 10:15:25 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "geninfo@state-bank.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "subject": {
+          "value": "Internet Banking",
+          "status": "suspicious",
+          "reason": "Contains financial language"
+        },
+        "date": {
+          "value": "Tue, 20 Nov 2001 10:15:25 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<23501072.1075862165886.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/64."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: austintx.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: austintx.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: austintx.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 23 Oct 2001 15:14:37 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "jsmith@austintx.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Tue, 23 Oct 2001 15:14:37 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<18628257.1075858644723.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/23."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 25 Nov 2001 19:21:47 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Sun, 25 Nov 2001 19:21:47 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<33335249.1075863149624.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/83."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: concureworkplace.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 21:16:58 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 21:16:58 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<31239550.1075858645503.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/45."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 08:38:37 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 08:38:37 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<10482145.1075858644866.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/29."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 11 Sep 2001 10:12:32 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 11 Sep 2001 10:12:32 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<18347911.1075858644636.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/20."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: about-cis.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: about-cis.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 11:22:36 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 11:22:36 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<16163432.1075862166007.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/69."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: state-bank.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: state-bank.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: Internet Banking",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 19 Nov 2001 15:49:53 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "geninfo@state-bank.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "subject": {
+          "value": "Internet Banking",
+          "status": "suspicious",
+          "reason": "Contains financial language"
+        },
+        "date": {
+          "value": "Mon, 19 Nov 2001 15:49:53 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<2467021.1075862165862.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/63."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 11 Dec 2001 11:40:55 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 11 Dec 2001 11:40:55 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<19990687.1075855377507.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/4."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 16 Nov 2001 10:07:13 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Fri, 16 Nov 2001 10:07:13 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<26175277.1075863149462.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/78."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 09:16:09 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 09:16:09 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<16084919.1075858644911.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/31."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: open2win.oi3.net",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: open2win.oi3.net",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: open2win.oi3.net",
+          "weight": 10
+        },
+        {
+          "rule": "subject_financial",
+          "name": "Subject contains financial language",
+          "description": "Subject: PHILLIP, FREE Stock Alerts, Make Money on Your Stocks!",
+          "weight": 15
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 15:19:15 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "melissaspears@open2win.oi3.net",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "subject": {
+          "value": "PHILLIP, FREE Stock Alerts, Make Money on Your Stocks!",
+          "status": "suspicious",
+          "reason": "Contains financial language"
+        },
+        "date": {
+          "value": "Tue, 27 Nov 2001 15:19:15 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<23221832.1075862166078.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/72."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 31 Dec 2001 17:18:31 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "arsystem@mailman.enron.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Mon, 31 Dec 2001 17:18:31 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<4845954.1075855377776.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/14."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: about-cis.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: about-cis.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sat, 29 Dec 2001 15:02:59 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Sat, 29 Dec 2001 15:02:59 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<17633117.1075855377578.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/7."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: earnings.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 14:10:02 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 14:10:02 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<24734819.1075858644935.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/32."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: mailman.enron.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 16:22:13 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "arsystem@mailman.enron.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Mon, 29 Oct 2001 16:22:13 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<26086640.1075858645326.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/38."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: integrityrs.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 16:50:21 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 16:50:21 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<20123659.1075862166054.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/71."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 1 Jan 2002 14:34:36 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 1 Jan 2002 14:34:36 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<1954142.1075855377847.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/17."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 27 Dec 2001 14:58:02 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Thu, 27 Dec 2001 14:58:02 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<22507094.1075855377554.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/6."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: earnings.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 14:23:26 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 14:23:26 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<12246129.1075858645002.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/33."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 13:20:35 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 13:20:35 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<2123429.1075862166032.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/70."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 16:34:23 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 16:34:23 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<15955949.1075858645356.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/39."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: sportsline.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 31 Dec 2001 15:26:05 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 31 Dec 2001 15:26:05 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<23518365.1075855377824.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/16."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 17 Dec 2001 08:40:38 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 17 Dec 2001 08:40:38 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<2952100.1075855377529.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/5."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 10:47:55 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 10:47:55 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<12656490.1075858644888.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/30."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 16 Nov 2001 12:22:12 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Fri, 16 Nov 2001 12:22:12 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<29285102.1075863149530.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/79."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: swbell.net",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: swbell.net",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 17:05:30 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 17:05:30 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<17733064.1075862166101.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/73."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: anchordesk.zdlists.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: anchordesk.zdlists.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: anchordesk.zdlists.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 31 Dec 2001 22:54:34 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "anchordesk_daily@anchordesk.zdlists.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Mon, 31 Dec 2001 22:54:34 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<9354794.1075855377799.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/15."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 11:04:59 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 11:04:59 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<31788530.1075862165983.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/68."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 11 Sep 2001 14:44:51 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 11 Sep 2001 14:44:51 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<8113917.1075858644677.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/21."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 2 Nov 2001 12:18:31 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Fri, 2 Nov 2001 12:18:31 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<19495537.1075862165839.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/62."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Wed, 10 Oct 2001 09:03:56 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Wed, 10 Oct 2001 09:03:56 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<5393535.1075858644700.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/22."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 19:06:37 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 19:06:37 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<26738394.1075858645481.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/44."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 75,
+      "indicators": [
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: keyad.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 26 Oct 2001 07:29:03 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Fri, 26 Oct 2001 07:29:03 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<16679015.1075858644843.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/28."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: info.iwon.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: info.iwon.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: info.iwon.com",
+          "weight": 10
+        },
+        {
+          "rule": "subject_prize",
+          "name": "Subject contains prize-related language",
+          "description": "Subject: Phillip, pick a prize!",
+          "weight": 20
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 16:15:38 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "iwon@info.iwon.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "subject": {
+          "value": "Phillip, pick a prize!",
+          "status": "suspicious",
+          "reason": "Contains prize-related language"
+        },
+        "date": {
+          "value": "Mon, 29 Oct 2001 16:15:38 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<4623877.1075858645379.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/40."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 26 Nov 2001 15:22:12 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 26 Nov 2001 15:22:12 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<32797781.1075863149691.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/86."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 25 Oct 2001 13:24:44 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Thu, 25 Oct 2001 13:24:44 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<17507447.1075858644790.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/26."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 23 Nov 2001 09:11:38 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Fri, 23 Nov 2001 09:11:38 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<13304781.1075862165910.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/65."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 26 Nov 2001 15:33:45 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 26 Nov 2001 15:33:45 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<16804123.1075863149669.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/85."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 18:23:36 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 18:23:36 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<26692207.1075858645447.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/43."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Thu, 25 Oct 2001 12:04:35 -0700 (PDT)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Thu, 25 Oct 2001 12:04:35 -0700 (PDT)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<7617520.1075858644768.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/25."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 08:02:04 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 08:02:04 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<6722149.1075862165935.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/66."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 14:03:58 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 14:03:58 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<31359005.1075858645054.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/34."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Fri, 7 Dec 2001 10:06:42 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Fri, 7 Dec 2001 10:06:42 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<16159836.1075855377439.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/1."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 30 Dec 2001 23:42:30 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Sun, 30 Dec 2001 23:42:30 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<7462038.1075855377703.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/11."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 29 Oct 2001 16:00:44 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 29 Oct 2001 16:00:44 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<2293483.1075858645303.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/37."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 10 Dec 2001 14:59:55 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Mon, 10 Dec 2001 14:59:55 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<8802987.1075855377462.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/2."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 85,
+      "indicators": [
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: intelligencepress.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 1 Jan 2002 14:46:05 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 1 Jan 2002 14:46:05 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<27039304.1075855377869.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/18."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: feedback.iwon.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: feedback.iwon.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: feedback.iwon.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Mon, 31 Dec 2001 02:24:51 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "prizemachine@feedback.iwon.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Mon, 31 Dec 2001 02:24:51 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<21572157.1075855377726.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/12."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 100,
+      "indicators": [
+        {
+          "rule": "domain_no_mx",
+          "name": "Sender domain has no MX records",
+          "description": "Domain: mail02.unitedmarketingstrategies.com",
+          "weight": 15
+        },
+        {
+          "rule": "domain_no_spf",
+          "name": "Sender domain has no SPF records",
+          "description": "Domain: mail02.unitedmarketingstrategies.com",
+          "weight": 10
+        },
+        {
+          "rule": "domain_no_dmarc",
+          "name": "Sender domain has no DMARC records",
+          "description": "Domain: mail02.unitedmarketingstrategies.com",
+          "weight": 10
+        },
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Sun, 30 Dec 2001 13:20:05 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "from": {
+          "value": "software@mail02.unitedmarketingstrategies.com",
+          "status": "suspicious",
+          "reason": "Sender domain has no MX records"
+        },
+        "date": {
+          "value": "Sun, 30 Dec 2001 13:20:05 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<7059385.1075855377617.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/8."
+    },
+    {
+      "is_phishing": true,
+      "phishing_probability": 65,
+      "indicators": [
+        {
+          "rule": "very_old_date",
+          "name": "Email has a very old date",
+          "description": "Date: Tue, 27 Nov 2001 17:06:01 -0800 (PST)",
+          "weight": 15
+        },
+        {
+          "rule": "unusual_chain_length",
+          "name": "Unusual number of mail servers in delivery path",
+          "description": "Too few hops (0 servers)",
+          "weight": 15
+        },
+        {
+          "rule": "missing_dkim",
+          "name": "No DKIM signature",
+          "description": "Email lacks DomainKeys Identified Mail signature",
+          "weight": 15
+        },
+        {
+          "rule": "message_id_domain_mismatch",
+          "name": "Message-ID domain doesn't match sender",
+          "description": "Message-ID domain: thyme",
+          "weight": 20
+        }
+      ],
+      "header_analysis": {
+        "date": {
+          "value": "Tue, 27 Nov 2001 17:06:01 -0800 (PST)",
+          "status": "suspicious",
+          "reason": "Email has a very old date"
+        },
+        "received": {
+          "value": "0 headers",
+          "status": "suspicious",
+          "reason": "Unusual number of mail servers in delivery path"
+        },
+        "message-id": {
+          "value": "<9144651.1075862166126.JavaMail.evans@thyme>",
+          "status": "suspicious",
+          "reason": "Domain doesn't match sender domain"
+        }
+      },
+      "file": "data/legitimate/enron_mail_20110402/maildir/allen-p/inbox/74."
+    }
+  ],
+  "statistics": {
+    "phishing_count": 66,
+    "legitimate_count": 0,
+    "error_count": 0
+  }
+}

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         RESULT • DARK-NEON CYBER
+         Detailed result view with gauges, tabs, indicators
+         ========================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result — PhishGuard</title>
+
+    <!-- Bootstrap + Icons + Fonts + Chart.js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Project Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Page-scoped visual helpers -->
+    <style>
+        .result-header {
+            background:
+                radial-gradient(1000px 500px at -10% 0%, rgba(0,229,255,0.25), transparent 60%),
+                radial-gradient(1000px 500px at 110% 10%, rgba(122,99,255,0.25), transparent 60%),
+                linear-gradient(135deg, #0c0f16 0%, #0a0c13 100%);
+            color: #e6f1ff;
+            padding: 2.25rem 0;
+            border-bottom: 1px solid rgba(255,255,255,.06);
+        }
+        .metadata-item { padding: .55rem 0; border-bottom: 1px dashed rgba(255,255,255,.08); }
+        .metadata-item:last-child { border-bottom: none; }
+        .indicator-card { border-left: 4px solid; margin-bottom: 1rem; transition: transform .2s; background: rgba(255,255,255,.02); }
+        .indicator-card:hover { transform: translateY(-2px); }
+        .indicator-card.high { border-left-color: #ff3b6e; }
+        .indicator-card.medium { border-left-color: #ffb84d; }
+        .indicator-card.low { border-left-color: #19e58f; }
+        .indicator-header { display:flex; justify-content:space-between; align-items:center; }
+        .indicator-badge { font-size: .8rem; padding: .25rem .5rem; }
+        .evidence-item { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 6px; padding: .6rem .75rem; margin-top: .5rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; white-space: pre-wrap; word-break: break-word; }
+        .highlight { background: rgba(0,229,255,.25); padding: 0 .15rem; border-radius: 2px; }
+        .email-text-content, .email-headers { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); }
+        .badge-nova { background: linear-gradient(90deg,#ff3b6e,#7a63ff); }
+        .header-table { border-radius: 8px; overflow: hidden; }
+        .header-table th { background: rgba(0,229,255,.1); border-bottom: 2px solid rgba(0,229,255,.3); }
+        .header-table td { border-bottom: 1px solid rgba(255,255,255,.05); }
+        .header-table tbody tr:hover { background: rgba(0,229,255,.05); }
+        .text-cyan { color: #00e5ff !important; }
+    </style>
+</head>
+<body class="theme-dark">
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-void neon-underline shadow-soft">
+        <div class="container">
+            <a class="navbar-brand brand-orb" href="/"><i class="bi bi-shield-lock me-2"></i>PhishGuard</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarNav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="result-header">
+        <div class="container text-center">
+            <h1 class="display-6 fw-bold">
+                <span class="{{ 'text-danger-neon' if result.is_phishing else 'text-success-neon' }}">
+                    {{ 'Phishing Detected' if result.is_phishing else 'Legitimate Email' }}
+                </span>
+            </h1>
+            <p class="mb-0">File: <span class="text-cyan">{{ result.file }}</span></p>
+            <p class="text-muted-neo mb-0">Analyzed on: {{ result.analysis_time }}</p>
+        </div>
+    </section>
+
+    <!-- BODY -->
+    <div class="container my-5">
+        <!-- SUMMARY -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="card glass-card h-100">
+                    <div class="card-header bg-void-2 border-0">
+                        <h5 class="card-title mb-0 text-light"><i class="bi bi-card-list me-2"></i>Email Metadata</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="metadata-item"><strong>From:</strong> <span class="text-muted-neo">{{ result.email_metadata.from }}</span></div>
+                        <div class="metadata-item"><strong>To:</strong> <span class="text-muted-neo">{{ result.email_metadata.to }}</span></div>
+                        <div class="metadata-item"><strong>Subject:</strong> <span class="text-muted-neo">{{ result.email_metadata.subject }}</span></div>
+                        <div class="metadata-item"><strong>Date:</strong> <span class="text-muted-neo">{{ result.email_metadata.date }}</span></div>
+                        <div class="metadata-item"><strong>Analysis Time:</strong> <span class="text-muted-neo">{{ result.analysis_time }}</span></div>
+
+                        <!-- Score Gauge (doughnut half) -->
+                        <div class="mt-4">
+                            <h6 class="mb-3 text-light">Phishing Score</h6>
+                            <div class="gauge-container">
+                                <canvas id="scoreGauge"></canvas>
+                            </div>
+                            <div class="text-center mt-2">
+                                {% if result.phishing_probability is defined %}
+                                    <span class="badge badge-nova px-3 py-2 fs-6">{{ result.phishing_probability }}%</span>
+                                {% elif result.phishing_score is defined %}
+                                    <span class="badge badge-nova px-3 py-2 fs-6">{{ result.phishing_score }}%</span>
+                                {% else %}
+                                    <span class="badge bg-secondary px-3 py-2 fs-6">N/A</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INDICATORS -->
+            <div class="col-md-8">
+                <div class="card glass-card h-100">
+                    <div class="card-header bg-void-2 border-0">
+                        <h5 class="card-title mb-0 text-light"><i class="bi bi-exclamation-triangle me-2"></i>Phishing Indicators</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if result.indicators %}
+                            <div class="accordion" id="indicatorsAccordion">
+                                {% for indicator in result.indicators %}
+                                <div class="indicator-card {{ indicator.severity }}">
+                                    <div class="card bg-transparent border-0">
+                                        <div class="card-header indicator-header bg-transparent border-0" id="heading{{ loop.index }}">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link text-light text-decoration-none" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapse{{ loop.index }}"
+                                                        aria-expanded="{{ 'true' if loop.index == 1 else 'false' }}"
+                                                        aria-controls="collapse{{ loop.index }}">
+                                                    {{ indicator.name }}
+                                                </button>
+                                            </h5>
+                                            <span class="badge indicator-badge {{ 'bg-danger-soft' if indicator.severity == 'high' else 'bg-warning-soft' if indicator.severity == 'medium' else 'bg-info-soft' }}">{{ indicator.severity }}</span>
+                                        </div>
+                                        <div id="collapse{{ loop.index }}" class="collapse {{ 'show' if loop.index == 1 else '' }}" aria-labelledby="heading{{ loop.index }}" data-bs-parent="#indicatorsAccordion">
+                                            <div class="card-body">
+                                                <p class="text-muted-neo mb-2">{{ indicator.description }}</p>
+                                                {% if indicator.evidence %}
+                                                <h6 class="mt-3 mb-2 text-light">Evidence:</h6>
+                                                <div class="evidence-item">{{ indicator.evidence|safe }}</div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            <div class="text-center text-muted py-4">
+                                <i class="bi bi-shield-check fs-1 d-block mb-2"></i>
+                                No phishing indicators detected
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMAIL CONTENT -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card glass-card">
+                    <div class="card-header bg-void-2 border-0">
+                        <h5 class="card-title mb-0 text-light"><i class="bi bi-envelope-paper me-2"></i>Email Content</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav nav-tabs neon-tabs" id="emailContentTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="body-tab" data-bs-toggle="tab" data-bs-target="#body" type="button" role="tab" aria-controls="body" aria-selected="true">Body</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="headers-tab" data-bs-toggle="tab" data-bs-target="#headers" type="button" role="tab" aria-controls="headers" aria-selected="false">Headers</button>
+                            </li>
+                            {% if result.get('features', {}).get('attachments') %}
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="attachments-tab" data-bs-toggle="tab" data-bs-target="#attachments" type="button" role="tab" aria-controls="attachments" aria-selected="false">Attachments</button>
+                            </li>
+                            {% endif %}
+                        </ul>
+
+                        <div class="tab-content p-3" id="emailContentTabsContent">
+                            <div class="tab-pane fade show active" id="body" role="tabpanel" aria-labelledby="body-tab">
+                                <div class="email-body-content">
+                                    {% if result.get('features', {}).get('body_html') %}
+                                        <div class="alert alert-info alert-soft mb-3">
+                                            <i class="bi bi-info-circle me-2"></i>
+                                            This email contains HTML content which has been sanitized for security. Potentially dangerous elements have been removed.
+                                        </div>
+                                        <div class="email-html-content border-neo p-3 rounded" style="background: rgba(255,255,255,0.95); color: #333; min-height: 200px; overflow-y: auto; max-height: 600px;">
+                                            {{ result.get('features', {}).get('body_html')|safe }}
+                                        </div>
+                                        {% if result.get('features', {}).get('body') %}
+                                        <div class="mt-3">
+                                            <h6 class="text-light mb-2">Plain Text Version:</h6>
+                                            <pre class="email-text-content p-3 rounded small" style="max-height: 300px; overflow-y: auto;">{{ result.get('features', {}).get('body') }}</pre>
+                                        </div>
+                                        {% endif %}
+                                    {% elif result.get('features', {}).get('body') %}
+                                        <pre class="email-text-content p-3 rounded small" style="max-height: 600px; overflow-y: auto; white-space: pre-wrap; word-wrap: break-word;">{{ result.get('features', {}).get('body') }}</pre>
+                                    {% else %}
+                                        <div class="text-center text-muted py-4">
+                                            <i class="bi bi-envelope-x fs-1 d-block mb-2"></i>
+                                            No email body content available
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="headers" role="tabpanel" aria-labelledby="headers-tab">
+                                {% if result.get('features', {}).get('formatted_headers') %}
+                                                                        <div class=\"table-responsive\">\n                                        <table class=\"table table-dark table-hover align-middle header-table\">\n                                            <thead class=\"table-head-soft\">\n                                                <tr>\n                                                    <th style=\"width: 25%; min-width: 150px;\">Header</th>\n                                                    <th style=\"width: 75%;\">Value</th>\n                                                </tr>\n                                            </thead>
+                                            <tbody>
+                                                {% for header in result.features.formatted_headers %}
+                                                <tr>
+                                                    <td class="fw-bold text-cyan">{{ header.name }}</td>
+                                                    <td class="text-muted-neo" style="word-break: break-word; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 0.85em;">{{ header.value|safe }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="mt-4">
+                                        <button class="btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#rawHeaders" aria-expanded="false" aria-controls="rawHeaders">
+                                            <i class="bi bi-code-square me-2"></i>Show Raw Headers
+                                        </button>
+                                        <div class="collapse mt-3" id="rawHeaders">
+                                            <pre class="email-headers p-3 rounded small" style="max-height: 400px; overflow-y: auto;">{{ result.get('features', {}).get('raw_headers') }}</pre>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="text-center text-muted py-4">
+                                        <i class="bi bi-file-earmark-x fs-1 d-block mb-2"></i>
+                                        No header information available
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            {% if result.get('features', {}).get('attachments') %}
+                            <div class="tab-pane fade" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-hover align-middle">
+                                        <thead class="table-head-soft">
+                                            <tr>
+                                                <th>Filename</th>
+                                                <th>Type</th>
+                                                <th>Size</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for attachment in result.features.attachments %}
+                                            <tr>
+                                                <td class="text-muted-neo">{{ attachment.filename }}</td>
+                                                <td class="text-muted-neo">{{ attachment.content_type }}</td>
+                                                <td class="text-muted-neo">{{ attachment.size }} bytes</td>
+                                                <td>
+                                                    {% if attachment.is_suspicious %}
+                                                    <span class="badge bg-danger-soft">Suspicious</span>
+                                                    {% else %}
+                                                    <span class="badge bg-success-soft">Clean</span>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUSPICIOUS INDICATORS GRID -->
+        {% if result.indicators %}
+            <h2 class="mt-5 mb-4 text-gradient">Suspicious Indicators</h2>
+            <div class="row">
+                {% for indicator in result.indicators %}
+                    <div class="col-md-6 mb-3">
+                        {% if indicator.weight >= 20 %}
+                            {% set severity_class = 'high-severity' %}
+                            {% set severity_text = 'High' %}
+                            {% set severity_bg = 'bg-danger-soft' %}
+                        {% elif indicator.weight >= 10 %}
+                            {% set severity_class = 'medium-severity' %}
+                            {% set severity_text = 'Medium' %}
+                            {% set severity_bg = 'bg-warning-soft' %}
+                        {% else %}
+                            {% set severity_class = 'low-severity' %}
+                            {% set severity_text = 'Low' %}
+                            {% set severity_bg = 'bg-info-soft' %}
+                        {% endif %}
+
+                        <div class="card indicator-card {{ severity_class }}">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h5 class="card-title text-light mb-0">{{ indicator.name }}</h5>
+                                    <span class="badge {{ severity_bg }}">{{ severity_text }}</span>
+                                </div>
+                                <p class="card-text text-muted-neo">{{ indicator.description }}</p>
+                                <div class="text-muted small">Rule: <span class="text-cyan">{{ indicator.rule }}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="alert alert-success alert-soft mt-5">
+                <i class="bi bi-check-circle-fill me-2"></i> No suspicious indicators were detected in this email.
+            </div>
+        {% endif %}
+
+        <!-- ACTIONS -->
+        <div class="d-flex justify-content-between mt-5">
+            <a href="/" class="btn btn-outline-neon"><i class="bi bi-arrow-left me-2"></i>Back to Home</a>
+            <a href="/dashboard" class="btn btn-neon">View Dashboard <i class="bi bi-graph-up ms-2"></i></a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-void text-center text-muted-neo py-4 mt-5 border-top border-dark-2">
+        <div class="container">© 2025 PhishGuard | CS 279 Project — Result View</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Gauge + Evidence highlighting -->
+    <script>
+        // Compute phishing score from probability or score (fallback 0)
+        const phishingScore = Math.min(Math.max(Number('{{ result.phishing_probability|default(result.phishing_score|default(0)) }}'), 0), 100);
+        const scoreGauge = document.getElementById('scoreGauge');
+
+        if (scoreGauge) {
+            new Chart(scoreGauge, {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [phishingScore, 100 - phishingScore],
+                        backgroundColor: ['#ff3b6e', 'rgba(255,255,255,0.08)'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    cutout: '75%',
+                    rotation: -90,
+                    circumference: 180,
+                    plugins: { legend: { display: false }, tooltip: { enabled: false } }
+                }
+            });
+        }
+
+        // Evidence highlighting (safe regex escaping)
+        document.querySelectorAll('.evidence-item').forEach(evidence => {
+            let indicators = [];
+            try { indicators = JSON.parse('{{ result.indicators|tojson|safe }}'); }
+            catch (e) { indicators = []; }
+            indicators.forEach(indicator => {
+                if (indicator.evidence) {
+                    const escaped = indicator.evidence.replace(/[\\^$.*+?()[\]{}|]/g, '\\$&');
+                    const rx = new RegExp(escaped, 'gi');
+                    evidence.innerHTML = evidence.innerHTML.replace(rx, m => `<span class="highlight">${m}</span>`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
